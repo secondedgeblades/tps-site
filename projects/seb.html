@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Edge Blades - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="font-display text-xl font-bold tracking-wide hover:text-[#E0D8CE]">The Piglet's Satchel</a>
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-seb-red);">Second Edge Blades</h1>
+
+    <!-- What it is -->
+    <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
+      <p>A dystopian fiction universe delivered as multimedia packets. Each release combines prose, original music, illustrations, and interactive narrative into a single collectible experience.</p>
+      <p>The story follows a band that weaponises music and analog technology against a global system of neuroacoustic control. All combat is through sound: SPL, resonance, harmonic distortion, phase alignment. The flaw is the feature.</p>
+    </div>
+
+    <!-- Packet Model -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">What You Get</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+
+      <!-- Free tier -->
+      <div class="p-6 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <h3 class="font-display text-lg font-semibold mb-4" style="color: var(--color-text);">Free</h3>
+        <ul class="space-y-2 text-sm" style="color: var(--color-text-muted);">
+          <li>1 public music track</li>
+          <li>1 illustration</li>
+          <li>CYOA interactive narrative (read-only)</li>
+        </ul>
+      </div>
+
+      <!-- Paid tier -->
+      <div class="p-6 rounded-lg border-2" style="border-color: var(--color-seb-red); background-color: var(--color-seb-red-light);">
+        <h3 class="font-display text-lg font-semibold mb-1" style="color: var(--color-seb-red);">Paid</h3>
+        <p class="text-xs mb-4" style="color: var(--color-text-muted);">$4.96 per packet</p>
+        <ul class="space-y-2 text-sm" style="color: var(--color-text);">
+          <li>Complete prose chapters</li>
+          <li>Exclusive music track</li>
+          <li>All illustrations</li>
+          <li>Lore artifact</li>
+          <li>Voting rights</li>
+          <li>Forum badge</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- C-AITS Ratings -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Transparency Ratings</h2>
+    <p class="text-sm mb-6" style="color: var(--color-text-muted);">Rated per component using the <a href="../caits.html" class="underline hover:no-underline" style="color: var(--color-accent);">C-AITS scale</a>.</p>
+
+    <div class="space-y-3 mb-12">
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Core Story / Lore</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 0 — The Soul</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-2.svg" alt="C-AITS 2" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Music / Sound</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 2 — Hybrid</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-4.svg" alt="C-AITS 4" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Concept Art / Visuals</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 4 — Generated</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-3.svg" alt="C-AITS 3" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Website Code</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 3.5 — Synthesized</span>
+      </div>
+    </div>
+
+    <!-- Link out -->
+    <div class="text-center">
+      <a href="https://second-edge-blades.pages.dev" target="_blank" rel="noopener" class="inline-block px-6 py-3 rounded-lg text-sm font-medium text-white transition-colors" style="background-color: var(--color-seb-red);">Visit Second Edge Blades</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+        <a href="https://www.reddit.com/user/DeadJobbyJabber" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Reddit</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="../assets/caits/caits-3.svg" alt="C-AITS Level 3" class="h-5 w-auto">
+          <span>Site: C-AITS 3</span>
+        </a>
+      </div>
+      <p>&copy; The Piglet's Satchel, 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
