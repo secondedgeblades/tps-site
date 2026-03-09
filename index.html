@@ -41,10 +41,39 @@
     </div>
   </nav>
 
-  <!-- Main content placeholder -->
-  <main class="flex-1 max-w-3xl mx-auto px-6 py-24 text-center">
-    <h1 class="text-5xl font-bold mb-6">The Piglet's Satchel</h1>
-    <p class="text-lg" style="color: var(--color-text-muted);">Site scaffold loaded.</p>
+  <!-- Intro -->
+  <section class="max-w-3xl mx-auto px-6 pt-24 pb-16 text-center">
+    <h1 class="font-display text-5xl md:text-6xl font-bold mb-8" style="color: var(--color-text);">The Piglet's Satchel</h1>
+    <p class="text-xl md:text-2xl leading-relaxed font-light" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun.<br>Take a look at what I made.</p>
+  </section>
+
+  <!-- Projects -->
+  <main id="projects" class="max-w-5xl mx-auto px-6 pb-24">
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- SEB Card -->
+      <a href="projects/seb.html" class="group block rounded-xl overflow-hidden border transition-shadow hover:shadow-lg" style="border-color: var(--color-border);">
+        <div class="h-48 flex items-center justify-center" style="background-color: var(--color-seb-red-light);">
+          <span class="font-display text-3xl font-bold" style="color: var(--color-seb-red);">SEB</span>
+        </div>
+        <div class="p-6" style="background-color: var(--color-bg);">
+          <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Second Edge Blades</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Dystopian fiction delivered as multimedia packets. Prose, music, art, and interactive narrative.</p>
+        </div>
+      </a>
+
+      <!-- Ruby Card -->
+      <a href="projects/ruby.html" class="group block rounded-xl overflow-hidden border transition-shadow hover:shadow-lg" style="border-color: var(--color-border);">
+        <div class="h-48 flex items-center justify-center" style="background-color: var(--color-ruby-green-light);">
+          <span class="font-display text-3xl font-bold" style="color: var(--color-ruby-green);">Ruby</span>
+        </div>
+        <div class="p-6" style="background-color: var(--color-bg);">
+          <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Ruby and the Garden Guardian</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
+        </div>
+      </a>
+
+    </div>
   </main>
 
   <!-- Footer -->
