@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruby and the Garden Guardian - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="font-display text-xl font-bold tracking-wide hover:text-[#E0D8CE]">The Piglet's Satchel</a>
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-ruby-green);">Ruby and the Garden Guardian</h1>
+
+    <!-- What it is -->
+    <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
+      <p>A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
+      <p><!-- DRAFT: CK to expand this description -->Ruby discovers something extraordinary growing between the weeds and the ordinary. A story about looking closer, being braver, and trusting that the small things matter.</p>
+    </div>
+
+    <!-- Status -->
+    <h2 class="font-display text-2xl font-semibold mb-4" style="color: var(--color-text);">Status</h2>
+    <p class="text-sm mb-12 p-4 rounded-lg border" style="color: var(--color-text-muted); border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <!-- DRAFT: CK to update when status changes -->
+      Proof copy ordered. ISBN pending.
+    </p>
+
+    <!-- C-AITS Ratings -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Transparency Ratings</h2>
+    <p class="text-sm mb-6" style="color: var(--color-text-muted);">Rated per component using the <a href="../caits.html" class="underline hover:no-underline" style="color: var(--color-accent);">C-AITS scale</a>.</p>
+
+    <!-- DRAFT: CK to confirm these ratings -->
+    <div class="space-y-3 mb-12">
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Story / Text</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 0 — The Soul</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-4.svg" alt="C-AITS 4" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Illustrations</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 4 — Generated</span>
+      </div>
+    </div>
+
+    <!-- Link placeholder -->
+    <div class="text-center">
+      <!-- DRAFT: CK to add purchase/info link when available -->
+      <p class="text-sm italic" style="color: var(--color-text-muted);">Purchase link coming soon.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+        <a href="https://www.reddit.com/user/DeadJobbyJabber" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Reddit</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="../assets/caits/caits-3.svg" alt="C-AITS Level 3" class="h-5 w-auto">
+          <span>Site: C-AITS 3</span>
+        </a>
+      </div>
+      <p>&copy; The Piglet's Satchel, 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
