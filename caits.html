@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C-AITS - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl font-bold tracking-wide hover:text-[#E0D8CE]">The Piglet's Satchel</a>
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="caits.html" class="text-[#E0D8CE]">C-AITS</a>
+        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="caits.html" class="text-[#E0D8CE]">C-AITS</a>
+        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+
+    <!-- Intro -->
+    <div class="text-center mb-16">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-text);">C-AITS</h1>
+      <p class="text-lg md:text-xl font-light mb-2" style="color: var(--color-text-muted);">Creative AI Transparency Scale</p>
+    </div>
+
+    <div class="max-w-2xl mx-auto mb-16 space-y-5 text-base leading-relaxed" style="color: var(--color-text);">
+      <p>The binary "AI-generated" vs "human-made" label is useless. Most creative work lives somewhere in between, and that middle ground is where all the interesting decisions happen.</p>
+      <p>C-AITS is a 0 to 5 scale that gives creators a language to be specific about how AI was involved in their work, and gives audiences the information to make up their own minds about what they're looking at.</p>
+    </div>
+
+    <!-- The Scale -->
+    <h2 class="font-display text-2xl font-semibold mb-8 text-center" style="color: var(--color-text);">The Scale</h2>
+
+    <div class="space-y-4 mb-16">
+
+      <!-- Level 0 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-0.svg" alt="C-AITS Level 0" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 0: The Soul</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">100% human. Raw creative output. No AI touched it.</p>
+        </div>
+      </div>
+
+      <!-- Level 1 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-1.svg" alt="C-AITS Level 1" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 1: Augmented</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">Human core. AI used for basic assistance: grammar checks, brainstorming, minor suggestions.</p>
+        </div>
+      </div>
+
+      <!-- Level 2 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-2.svg" alt="C-AITS Level 2" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 2: Hybrid</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">Human structure and direction, but heavy AI texturing, rendering, or drafting.</p>
+        </div>
+      </div>
+
+      <!-- Level 3 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-3.svg" alt="C-AITS Level 3" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 3: Synthesized</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">True 50/50 collaboration. Iterative loop between human and machine.</p>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 4: Generated</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">AI-dominant output via prompt engineering. Human curated and edited.</p>
+        </div>
+      </div>
+
+      <!-- Level 5 -->
+      <div class="flex items-start gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <img src="assets/caits/caits-5.svg" alt="C-AITS Level 5" class="w-12 h-12 flex-shrink-0 mt-1">
+        <div>
+          <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 5: The Machine</h3>
+          <p class="text-sm mt-1" style="color: var(--color-text-muted);">Raw AI output. Zero human modification.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- How it's applied -->
+    <h2 class="font-display text-2xl font-semibold mb-6 text-center" style="color: var(--color-text);">How It's Applied</h2>
+
+    <div class="max-w-2xl mx-auto space-y-5 text-base leading-relaxed" style="color: var(--color-text);">
+      <p>C-AITS is rated <strong>per component</strong>, not per project. A project's prose might be Level 0 while its concept art is Level 4. Both facts matter, and collapsing them into a single number would hide the truth rather than reveal it.</p>
+      <p>Every piece of content released from this studio carries its C-AITS rating publicly. See each project's page for a full breakdown.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+        <a href="https://www.reddit.com/user/DeadJobbyJabber" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Reddit</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="assets/caits/caits-3.svg" alt="C-AITS Level 3" class="h-5 w-auto">
+          <span>Site: C-AITS 3</span>
+        </a>
+      </div>
+      <p>&copy; The Piglet's Satchel, 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
