@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hop Twice - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
+        <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
+        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
+        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="w-full" style="background-color: var(--color-hoptwice-brown-light);">
+    <img src="../assets/images/hoptwice-hero.png" alt="Hop Twice" class="w-full max-w-5xl mx-auto">
+  </div>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-hoptwice-brown);">Hop Twice</h1>
+
+    <!-- What it is -->
+    <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
+      <p>Instrumental music built from CK's back catalogue of original compositions. Each track is reimagined through AI-assisted production into long-form mixes designed for focus, study, and deep work.</p>
+      <p>The source material spans 20 years of songwriting across rock, electronic, acoustic, and everything between. The output is something new: familiar enough to disappear into the background, textured enough to reward attention.</p>
+    </div>
+
+    <!-- How it works -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">How It Works</h2>
+
+    <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
+      <p>Original tracks are fed through Suno's AI models with carefully tuned style prompts and parameters. The AI reimagines the harmonic and rhythmic structure while preserving the character of the original. A hard rock anthem becomes a swinging trip hop piece. A solo acoustic guitar ballad picks up dusty breaks and Rhodes keys.</p>
+      <p>Each mix runs roughly an hour, paired with looping pencil-sketch animations featuring a floppy rabbit who occasionally hops.</p>
+    </div>
+
+    <!-- Current styles -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Styles</h2>
+
+    <div class="space-y-3 mb-12">
+      <div class="p-4 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+        <h3 class="font-display text-lg font-semibold mb-1" style="color: var(--color-text);">Trip Hop</h3>
+        <p class="text-sm" style="color: var(--color-text-muted);">Dusty vinyl, jazz samples, slow breakbeats, thick atmosphere. The first collection: 15 tracks, 59 minutes.</p>
+      </div>
+    </div>
+
+    <!-- C-AITS Ratings -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Transparency Ratings</h2>
+    <p class="text-sm mb-6" style="color: var(--color-text-muted);">Rated per component using the <a href="../caits.html" class="underline hover:no-underline" style="color: var(--color-accent);">C-AITS scale</a>.</p>
+
+    <div class="space-y-3 mb-12">
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Source Compositions</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 0 — The Soul</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-4.svg" alt="C-AITS 4" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">AI-Produced Covers</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 4 — Generated</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-3.svg" alt="C-AITS 3" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Visuals / Animation</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 3 — Synthesized</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-4.svg" alt="C-AITS 4" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Video Assembly</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 4 — Generated</span>
+      </div>
+    </div>
+
+    <!-- Link out -->
+    <div class="text-center">
+      <a href="#" target="_blank" rel="noopener" class="inline-block px-6 py-3 rounded-lg text-sm font-medium text-white transition-colors" style="background-color: var(--color-hoptwice-brown);">YouTube (Coming Soon)</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="../assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-5 w-auto">
+          <span>Site: C-AITS 4</span>
+        </a>
+      </div>
+      <p>&copy; The Piglet's Satchel, 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
