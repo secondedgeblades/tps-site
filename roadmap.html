@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .segment {
+      height: 8px;
+      width: 32px;
+      border-radius: 4px;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
+        <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
+        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+
+      <!-- Hamburger button -->
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="max-w-5xl mx-auto px-6 pt-16 pb-10">
+    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4" style="color: var(--color-text);">Roadmap</h1>
+    <p class="text-xl font-light" style="color: var(--color-text-muted);">What we're making and where it's at.</p>
+  </section>
+
+  <!-- Roadmap content -->
+  <main class="max-w-5xl mx-auto px-6 pb-24">
+    <div id="roadmap-grid" class="grid md:grid-cols-2 gap-8"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-6">
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-5 w-auto">
+          <span>Site: C-AITS 4</span>
+        </a>
+      </div>
+      <p>&copy; The Piglet's Satchel, 2026</p>
+    </div>
+  </footer>
+
+  <!-- Hamburger menu toggle -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <script>
+    const ROADMAP_DATA = {
+      projects: [
+        {
+          "name": "SEB Packet 2",
+          "type": "multi",
+          "steps": [
+            { "name": "Prose", "status": "finished" },
+            { "name": "Music", "status": "not_started" },
+            { "name": "Illustrations", "status": "not_started" },
+            { "name": "CYOA Decision", "status": "not_started" },
+            { "name": "Lore Artifact", "status": "not_started" }
+          ]
+        },
+        {
+          "name": "Hop Twice Video 3",
+          "type": "multi",
+          "steps": [
+            { "name": "Style Chosen", "status": "not_started" },
+            { "name": "Music", "status": "not_started" },
+            { "name": "Visuals", "status": "not_started" }
+          ]
+        },
+        {
+          "name": "Merch Pipeline",
+          "type": "multi",
+          "steps": [
+            { "name": "Ruby Listings", "status": "not_started" },
+            { "name": "Hop Twice Listings", "status": "not_started" },
+            { "name": "Soft Dark Listings", "status": "not_started" },
+            { "name": "SEB Object Stickers", "status": "not_started" }
+          ]
+        },
+        { "name": "Echo Chamber 3D", "type": "single", "status": "in_progress" },
+        { "name": "The Soft Dark", "type": "single", "status": "conceptualised" },
+        { "name": "Tomb MKII Streaming", "type": "single", "status": "in_progress" }
+      ]
+    };
+
+    const STATUS_COLORS = {
+      finished:       { bg: '#2D6B3F', text: '#FFFFFF' },
+      in_progress:    { bg: '#6B4226', text: '#FFFFFF' },
+      conceptualised: { bg: '#6B6560', text: '#FFFFFF' },
+      not_started:    { bg: '#E0D8CE', text: '#2D2A26' }
+    };
+
+    const STATUS_LABELS = {
+      finished:       'Finished',
+      in_progress:    'In Progress',
+      conceptualised: 'Conceptualised',
+      not_started:    'Not Started'
+    };
+
+    function buildCard(project) {
+      const card = document.createElement('div');
+      card.className = 'rounded-xl border p-6';
+      card.style.borderColor = 'var(--color-border)';
+      card.style.backgroundColor = 'var(--color-bg)';
+
+      const title = document.createElement('h2');
+      title.className = 'font-display text-xl font-semibold mb-4';
+      title.style.color = 'var(--color-text)';
+      title.textContent = project.name;
+      card.appendChild(title);
+
+      if (project.type === 'multi') {
+        const finished = project.steps.filter(s => s.status === 'finished').length;
+        const total = project.steps.length;
+
+        const countEl = document.createElement('p');
+        countEl.className = 'text-xs mb-3';
+        countEl.style.color = 'var(--color-text-muted)';
+        countEl.textContent = `${finished} of ${total} complete`;
+        card.appendChild(countEl);
+
+        // Segments row
+        const segRow = document.createElement('div');
+        segRow.style.cssText = 'display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px;';
+        project.steps.forEach(step => {
+          const seg = document.createElement('div');
+          seg.className = 'segment';
+          seg.style.backgroundColor = STATUS_COLORS[step.status].bg;
+          segRow.appendChild(seg);
+        });
+        card.appendChild(segRow);
+
+        // Step list
+        const stepList = document.createElement('ul');
+        stepList.style.cssText = 'display: flex; flex-direction: column; gap: 6px;';
+        project.steps.forEach(step => {
+          const item = document.createElement('li');
+          item.style.cssText = 'display: flex; align-items: center; gap: 8px;';
+
+          const dot = document.createElement('span');
+          dot.className = 'status-dot';
+          dot.style.backgroundColor = STATUS_COLORS[step.status].bg;
+
+          const label = document.createElement('span');
+          label.className = 'text-sm';
+          label.style.color = 'var(--color-text)';
+          label.textContent = step.name;
+
+          item.appendChild(dot);
+          item.appendChild(label);
+          stepList.appendChild(item);
+        });
+        card.appendChild(stepList);
+
+      } else {
+        const colors = STATUS_COLORS[project.status];
+        const badge = document.createElement('span');
+        badge.className = 'status-badge';
+        badge.style.backgroundColor = colors.bg;
+        badge.style.color = colors.text;
+        badge.textContent = STATUS_LABELS[project.status];
+        card.appendChild(badge);
+      }
+
+      return card;
+    }
+
+    const grid = document.getElementById('roadmap-grid');
+    ROADMAP_DATA.projects.forEach(project => {
+      grid.appendChild(buildCard(project));
+    });
+  </script>
+
+</body>
+</html>
