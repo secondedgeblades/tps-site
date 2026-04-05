@@ -17,12 +17,12 @@
         <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
       </a>
       <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
-        <a href="caits.html" class="text-[#E0D8CE]">C-AITS</a>
-        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="caits.html" class="nav-link relative text-[#E0D8CE]">C-AITS</a>
+        <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
       </div>
       <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,8 +46,8 @@
 
     <!-- Intro -->
     <div class="text-center mb-16">
-      <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-text);">C-AITS</h1>
-      <p class="text-lg md:text-xl font-light mb-2" style="color: var(--color-text-muted);">Creative AI Transparency Scale</p>
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-8 animate-fade-up delay-1" style="color: var(--color-text);">C-AITS</h1>
+      <p class="text-lg md:text-xl font-light mb-2 animate-fade-up delay-2" style="color: var(--color-text-muted);">Creative AI Transparency Scale</p>
     </div>
 
     <div class="max-w-2xl mx-auto mb-16 space-y-5 text-base leading-relaxed" style="color: var(--color-text);">
@@ -61,7 +61,7 @@
     <div class="space-y-4 mb-16">
 
       <!-- Level 0 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-0.svg" alt="C-AITS Level 0" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 0: The Soul</h3>
@@ -70,7 +70,7 @@
       </div>
 
       <!-- Level 1 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-1.svg" alt="C-AITS Level 1" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 1: Augmented</h3>
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Level 2 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-2.svg" alt="C-AITS Level 2" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 2: Hybrid</h3>
@@ -88,7 +88,7 @@
       </div>
 
       <!-- Level 3 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-3.svg" alt="C-AITS Level 3" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 3: Synthesized</h3>
@@ -97,7 +97,7 @@
       </div>
 
       <!-- Level 4 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 4: Generated</h3>
@@ -106,7 +106,7 @@
       </div>
 
       <!-- Level 5 -->
-      <div class="flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      <div class="reveal flex items-center gap-5 p-5 rounded-lg border" style="border-color: var(--color-border); background-color: var(--color-bg-warm);">
         <img src="assets/caits/caits-5.svg" alt="C-AITS Level 5" class="w-28 h-28 flex-shrink-0 mt-1">
         <div>
           <h3 class="font-display text-lg font-semibold" style="color: var(--color-text);">Level 5: The Machine</h3>
@@ -196,19 +196,38 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <div class="flex items-center gap-6">
-        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
+          <p class="text-sm leading-relaxed">Fiction, music, and art from a studio that makes things because making things is fun.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="projects/seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
+            <a href="projects/ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
+            <a href="projects/hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
+            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
+            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-4">
+      <hr class="border-[#4A453F] mb-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
         <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
-          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-5 w-auto">
+          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
           <span>Site: C-AITS 4</span>
         </a>
+        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
       </div>
-      <p>&copy; The Piglet's Satchel, 2026</p>
     </div>
   </footer>
 
@@ -216,6 +235,18 @@
     document.getElementById('menu-toggle').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    }
   </script>
 
 </body>

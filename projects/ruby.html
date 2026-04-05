@@ -17,12 +17,12 @@
         <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
       </a>
       <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
-        <a href="../roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="../stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
-        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
+        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
       </div>
       <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,22 +32,22 @@
     </div>
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
       <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="text-[#E0D8CE]">Projects</a>
-        <a href="../roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="../stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
-        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
+        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
       </div>
     </div>
   </nav>
 
   <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
 
-    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8" style="color: var(--color-ruby-green);">Ruby and the Garden Guardian</h1>
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8 animate-fade-up delay-1" style="color: var(--color-ruby-green);">Ruby and the Garden Guardian</h1>
 
     <!-- What it is -->
-    <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
+    <div class="space-y-4 text-base leading-relaxed mb-12 animate-fade-up delay-2" style="color: var(--color-text);">
       <p>A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
       <p>This book came from exploring a story together with my daughter on a family walk one evening. We made the characters on paper and named them. Having just finished the first draft of the Second Edge Blades novel, I thought I would try my hand at turning our fun creative exercise into a proper book. This is the result.</p>
     </div>
@@ -86,28 +86,46 @@
     <!-- Purchase link -->
     <div class="text-center">
       <a href="https://www.blurb.ca/b/12813042-ruby-and-the-garden-guardian" target="_blank" rel="noopener"
-         class="inline-block px-8 py-3 rounded-lg font-display font-semibold text-lg transition-colors"
-         style="background-color: var(--color-ruby-green); color: #FAF7F2;"
-         onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+         class="btn"
+         style="background-color: var(--color-ruby-green);">
         Buy the Book
       </a>
     </div>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <div class="flex items-center gap-6">
-        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
+          <p class="text-sm leading-relaxed">Fiction, music, and art from a studio that makes things because making things is fun.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
+            <a href="ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
+            <a href="hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
+            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
+            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-4">
+      <hr class="border-[#4A453F] mb-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
         <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
-          <img src="../assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-5 w-auto">
+          <img src="../assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
           <span>Site: C-AITS 4</span>
         </a>
+        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
       </div>
-      <p>&copy; The Piglet's Satchel, 2026</p>
     </div>
   </footer>
 
@@ -115,6 +133,18 @@
     document.getElementById('menu-toggle').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    }
   </script>
 
 </body>

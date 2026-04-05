@@ -19,12 +19,12 @@
 
       <!-- Desktop links -->
       <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
-        <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
       </div>
 
       <!-- Hamburger button -->
@@ -48,18 +48,19 @@
     </div>
   </nav>
 
-  <!-- Intro -->
+  <!-- Hero -->
   <section class="max-w-3xl mx-auto px-6 pt-24 pb-16 text-center">
-    <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-32 md:h-40 w-auto mx-auto mb-6">
-    <h1 class="font-display text-5xl md:text-6xl font-bold mb-8" style="color: var(--color-text);">The Piglet's Satchel</h1>
-    <p class="text-xl md:text-2xl leading-relaxed font-light" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun.<br>Take a look at what I made.</p>
+    <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-32 md:h-40 w-auto mx-auto mb-6 animate-fade-in">
+    <h1 class="font-display text-5xl md:text-6xl font-bold mb-8 animate-fade-up delay-1" style="color: var(--color-text);">The Piglet's Satchel</h1>
+    <p class="text-xl md:text-2xl leading-relaxed font-light animate-fade-up delay-2" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun.<br>Take a look at what I made.</p>
+    <hr class="divider max-w-xs mx-auto mt-12 animate-fade-in delay-4">
   </section>
 
   <!-- Announcement -->
-  <section class="max-w-3xl mx-auto px-6 pb-12">
+  <section class="max-w-3xl mx-auto px-6 pb-12 animate-fade-up delay-3">
     <a href="projects/seb.html" class="block rounded-xl border-2 p-6 md:p-8 transition-shadow hover:shadow-lg" style="border-color: var(--color-seb-red); background-color: var(--color-seb-red-light);">
       <div class="flex items-start gap-4">
-        <span class="text-2xl flex-shrink-0" style="color: var(--color-seb-red);">NEW</span>
+        <span class="text-xs font-bold tracking-widest uppercase flex-shrink-0 px-2 py-1 rounded" style="color: white; background-color: var(--color-seb-red);">New</span>
         <div>
           <h2 class="font-display text-xl md:text-2xl font-bold mb-2" style="color: var(--color-seb-red);">Second Edge Blades is now completely free</h2>
           <p class="text-sm leading-relaxed" style="color: var(--color-text);">All prose, music, illustrations, and interactive narrative. No paywall, no login. The full experience, open to everyone.</p>
@@ -74,36 +75,36 @@
     <div class="grid md:grid-cols-2 gap-8">
 
       <!-- SEB Card -->
-      <a href="projects/seb.html" class="group block rounded-xl overflow-hidden border transition-shadow hover:shadow-lg" style="border-color: var(--color-border);">
+      <a href="projects/seb.html" class="group card block animate-fade-up delay-4" style="background-color: var(--color-bg);">
         <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-seb-red-light);">
-          <img src="assets/images/seb-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
+          <img src="assets/images/seb-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
           <span class="relative font-display text-3xl font-bold" style="color: var(--color-seb-red);">Second Edge Blades</span>
         </div>
-        <div class="p-6" style="background-color: var(--color-bg);">
+        <div class="p-6">
           <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Second Edge Blades</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Dystopian fiction delivered as multimedia packets. Prose, music, art, and interactive narrative.</p>
         </div>
       </a>
 
       <!-- Ruby Card -->
-      <a href="projects/ruby.html" class="group block rounded-xl overflow-hidden border transition-shadow hover:shadow-lg" style="border-color: var(--color-border);">
+      <a href="projects/ruby.html" class="group card block animate-fade-up delay-5" style="background-color: var(--color-bg);">
         <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-ruby-green-light);">
-          <img src="assets/images/ruby-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
+          <img src="assets/images/ruby-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
           <span class="relative font-display text-3xl font-bold text-center" style="color: var(--color-ruby-green);">Ruby and the Garden Guardian</span>
         </div>
-        <div class="p-6" style="background-color: var(--color-bg);">
+        <div class="p-6">
           <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Ruby and the Garden Guardian</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
         </div>
       </a>
 
       <!-- Hop Twice Card -->
-      <a href="projects/hoptwice.html" class="group block rounded-xl overflow-hidden border transition-shadow hover:shadow-lg" style="border-color: var(--color-border);">
+      <a href="projects/hoptwice.html" class="group card block animate-fade-up delay-6" style="background-color: var(--color-bg);">
         <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-hoptwice-brown-light);">
-          <img src="assets/images/hoptwice-hero.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20">
+          <img src="assets/images/hoptwice-hero.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
           <span class="relative font-display text-3xl font-bold" style="color: var(--color-hoptwice-brown);">Hop Twice</span>
         </div>
-        <div class="p-6" style="background-color: var(--color-bg);">
+        <div class="p-6">
           <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Hop Twice</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Instrumental mixes for studying, working, and late nights. Built from 20 years of original compositions.</p>
         </div>
@@ -113,26 +114,70 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#3A3530] text-[#D4CEC6] px-6 py-8">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-      <div class="flex items-center gap-6">
-        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="hover:text-[#FAF7F2] transition-colors">Substack</a>
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+        <!-- Studio -->
+        <div>
+          <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
+          <p class="text-sm leading-relaxed">Fiction, music, and art from a studio that makes things because making things is fun.</p>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="projects/seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
+            <a href="projects/ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
+            <a href="projects/hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
+            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
+            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
+          </div>
+        </div>
+
       </div>
-      <div class="flex items-center gap-4">
+
+      <hr class="border-[#4A453F] mb-6">
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
         <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
-          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-5 w-auto">
+          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
           <span>Site: C-AITS 4</span>
         </a>
+        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
       </div>
-      <p>&copy; The Piglet's Satchel, 2026</p>
     </div>
   </footer>
 
-  <!-- Hamburger menu toggle -->
+  <!-- Scripts -->
   <script>
+    // Hamburger menu
     document.getElementById('menu-toggle').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+    // Scroll-triggered reveals
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    }
   </script>
 
 </body>
