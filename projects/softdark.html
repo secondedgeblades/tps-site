@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Soft Dark - The Piglet's Satchel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
+        <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
+        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
+        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
+      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
+        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
+        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
+        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-8 animate-fade-up delay-1" style="color: var(--color-text);">The Soft Dark</h1>
+
+    <!-- What it is -->
+    <div class="space-y-4 text-base leading-relaxed mb-12 animate-fade-up delay-2" style="color: var(--color-text);">
+      <p>The Soft Dark is a place that's soft... and dark. It's home to a host of creatures that are ferociously timid. And soft, oh so soft.</p>
+      <p>Four creatures from the Soft Dark wake up in gardens and alleys across the globe. They have no memory of the shift. Four children find them. They must hide a tiger-sized, moss-green fluffball in the pantry before their parents walk in. The creatures feel a pull toward each other. The kids have to bridge the gap.</p>
+    </div>
+
+    <!-- Preview images -->
+    <div class="mb-12 animate-fade-up delay-3">
+      <img src="../assets/images/softdark-hero.jpg" alt="The Soft Dark Title" class="rounded-lg shadow-md w-full mb-4">
+      <div class="grid grid-cols-2 gap-4">
+        <img src="../assets/images/softdark-group.jpg" alt="The Tufts Group" class="rounded-lg shadow-md w-full h-48 object-cover">
+        <img src="../assets/images/softdark-creature1.jpg" alt="Delilah" class="rounded-lg shadow-md w-full h-48 object-cover">
+      </div>
+    </div>
+
+    <!-- Status -->
+    <h2 class="font-display text-2xl font-semibold mb-4" style="color: var(--color-text);">Status</h2>
+    <p class="text-sm mb-12 p-4 rounded-lg border" style="color: var(--color-text-muted); border-color: var(--color-border); background-color: var(--color-bg-warm);">
+      Currently in development. The specimens are gathering.
+    </p>
+
+    <!-- C-AITS Ratings -->
+    <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Transparency Ratings</h2>
+    <p class="text-sm mb-6" style="color: var(--color-text-muted);">Rated per component using the <a href="../caits.html" class="underline hover:no-underline" style="color: var(--color-accent);">C-AITS scale</a>.</p>
+
+    <div class="space-y-3 mb-12">
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Story / Text</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 0 — The Soul</span>
+      </div>
+      <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
+        <img src="../assets/caits/caits-3.svg" alt="C-AITS 3" class="w-8 h-8">
+        <span class="text-sm font-medium" style="color: var(--color-text);">Illustrations</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 3 — Synthesized</span>
+      </div>
+    </div>
+
+    <!-- Purchase link -->
+    <div class="text-center">
+      <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener"
+         class="btn"
+         style="background-color: var(--color-accent);">
+        Follow on Substack
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
+          <p class="text-sm leading-relaxed">Fiction, music, and art. One person making things because making things is fun.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
+            <a href="ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
+            <a href="hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
+            <a href="softdark.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">The Soft Dark</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
+            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
+            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[#4A453F] mb-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
+          <img src="../assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
+          <span>Site: C-AITS 4</span>
+        </a>
+        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    const reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>
