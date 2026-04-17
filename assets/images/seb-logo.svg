@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="glow-primary">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Frequency spectrum background -->
+    <g opacity="0.25">
+        <rect x="50" y="60" width="4" height="35" fill="#c83232"/>
+        <rect x="68" y="55" width="4" height="45" fill="#c83232"/>
+        <rect x="86" y="50" width="4" height="55" fill="#c83232"/>
+        <rect x="104" y="45" width="4" height="65" fill="#c83232"/>
+        <rect x="122" y="50" width="4" height="55" fill="#c83232"/>
+        <rect x="140" y="55" width="4" height="45" fill="#c83232"/>
+        <rect x="158" y="52" width="4" height="51" fill="#c83232"/>
+        <rect x="176" y="48" width="4" height="59" fill="#c83232"/>
+        <rect x="194" y="45" width="4" height="65" fill="#c83232"/>
+        <rect x="212" y="50" width="4" height="55" fill="#c83232"/>
+        <rect x="230" y="53" width="4" height="49" fill="#c83232"/>
+        <rect x="248" y="50" width="4" height="55" fill="#c83232"/>
+        <rect x="266" y="48" width="4" height="59" fill="#c83232"/>
+        <rect x="284" y="45" width="4" height="65" fill="#c83232"/>
+        <rect x="302" y="50" width="4" height="55" fill="#c83232"/>
+        <rect x="320" y="55" width="4" height="45" fill="#c83232"/>
+        <rect x="338" y="60" width="4" height="35" fill="#c83232"/>
+    </g>
+    
+    <!-- Main text - tight kerning -->
+    <text x="50" y="90" font-family="Arial, sans-serif" font-size="40" font-weight="900" fill="#c83232" letter-spacing="-2">
+        SECONDEDGEBLADES
+    </text>
+    
+    <!-- Sharp blade accent through middle -->
+    <polygon filter="url(#glow-primary)" points="50,90 520,90 526,88 526,92" fill="#c83232" opacity="0.5"/>
+    
+    <!-- Subtitle -->
+    <text x="50" y="125" font-family="Arial, sans-serif" font-size="13" fill="#666666" letter-spacing="8">
+        S T U D I O
+    </text>
+    
+    <!-- Edge marker -->
+    <line x1="50" y1="135" x2="240" y2="135" stroke="#333333" stroke-width="1"/>
+</svg>
