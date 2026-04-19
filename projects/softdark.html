@@ -16,28 +16,32 @@
         <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
         <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
       </a>
+
+      <!-- Desktop links -->
       <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
-        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="../index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
         <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
         <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
       </div>
+
+      <!-- Hamburger button -->
       <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
+
+    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
       <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="nav-link relative text-[#E0D8CE]">Projects</a>
-        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="../stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
-        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="../index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
+        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="../roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
+        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
       </div>
     </div>
   </nav>
@@ -141,45 +145,35 @@
 
   </main>
 
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+  <!-- Footer -->
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
-          <p class="text-sm leading-relaxed">Fiction, music, and art. One person making things because making things is fun.</p>
+          <p class="text-sm leading-relaxed">One person making things because making things is fun. Fiction, music, and art curated as a collection of worlds.</p>
         </div>
-        <div>
-          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
-            <a href="ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
-            <a href="hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
-            <a href="softdark.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">The Soft Dark</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
-            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
-            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
-          </div>
+        <div class="flex flex-col md:items-end gap-2 text-sm">
+          <a href="https://ckarmstrong.substack.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Substack</a>
+          <a href="https://thepigletssatchel.tumblr.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Tumblr</a>
+          <a href="https://www.youtube.com/@HopTwice" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">YouTube</a>
+          <a href="https://www.etsy.com/shop/ThePigletsSatchel" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Etsy</a>
         </div>
       </div>
       <hr class="border-[#4A453F] mb-6">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
-          <img src="../assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
-          <span>Site: C-AITS 4</span>
+      <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
+        <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
+          <img src="../assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
+          <span>Human-Led Creation (C-AITS 4)</span>
         </a>
-        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
+        <span>&copy; 2026</span>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('menu-toggle').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
     });
     const reveals = document.querySelectorAll('.reveal');
     if (reveals.length) {

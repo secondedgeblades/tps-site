@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Piglet's Satchel</title>
+  <title>The Piglet's Satchel | All Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -19,12 +19,11 @@
 
       <!-- Desktop links -->
       <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="mission.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="stories.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
         <a href="caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
         <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
       </div>
 
       <!-- Hamburger button -->
@@ -38,90 +37,135 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
       <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="mission.html" class="hover:text-[#E0D8CE] transition-colors">Mission</a>
-        <a href="stories.html" class="hover:text-[#E0D8CE] transition-colors">Short Stories</a>
+        <a href="#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
         <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
+        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
         <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
+        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="max-w-3xl mx-auto px-6 pt-24 pb-16 text-center">
-    <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-32 md:h-40 w-auto mx-auto mb-6 animate-fade-in">
-    <h1 class="font-display text-5xl md:text-6xl font-bold mb-8 animate-fade-up delay-1" style="color: var(--color-text);">The Piglet's Satchel</h1>
-    <p class="text-xl md:text-2xl leading-relaxed font-light animate-fade-up delay-2" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun.<br>Take a look at what I made.</p>
+  <header class="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
+    <img src="assets/images/logo-v2.png" alt="" class="h-28 w-auto mx-auto mb-6 animate-fade-in">
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 animate-fade-up delay-1" style="color: var(--color-text);">A rummage through the satchel</h1>
+    <p class="text-lg md:text-xl leading-relaxed font-light animate-fade-up delay-2 max-w-2xl mx-auto" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun. These are the worlds being built inside the Piglet's Satchel.</p>
     <hr class="divider max-w-xs mx-auto mt-12 animate-fade-in delay-4">
-  </section>
+  </header>
 
-  <!-- Announcement -->
-  <section class="max-w-3xl mx-auto px-6 pb-12 animate-fade-up delay-3">
-    <a href="projects/seb.html" class="block rounded-xl border-2 p-6 md:p-8 transition-shadow hover:shadow-lg" style="border-color: var(--color-seb-red); background-color: var(--color-seb-red-light);">
-      <div class="flex items-start gap-4">
-        <span class="text-xs font-bold tracking-widest uppercase flex-shrink-0 px-2 py-1 rounded" style="color: white; background-color: var(--color-seb-red);">New</span>
-        <div>
-          <h2 class="font-display text-xl md:text-2xl font-bold mb-2" style="color: var(--color-seb-red);">Second Edge Blades is now completely free</h2>
-          <p class="text-sm leading-relaxed" style="color: var(--color-text);">All prose, music, illustrations, and interactive narrative. No paywall, no login. The full experience, open to everyone.</p>
-        </div>
-      </div>
-    </a>
-  </section>
+  <!-- Project Grid -->
+  <main id="projects" class="max-w-6xl mx-auto px-6 pb-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-  <!-- Projects -->
-  <main id="projects" class="max-w-5xl mx-auto px-6 pb-24">
-    <h2 class="sr-only">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <!-- SEB Card -->
-      <a href="projects/seb.html" class="group card block animate-fade-up delay-4" style="background-color: var(--color-bg);">
-        <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-seb-red-light);">
-          <img src="assets/images/seb-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
-          <img src="assets/images/seb-logo.png" alt="Second Edge Blades" class="relative h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+      <!-- Card 1: Second Edge Blades -->
+      <a href="projects/seb.html" class="group card block animate-fade-up delay-3 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-black">
+          <img src="assets/images/seb-hero.jpg" alt="Second Edge Blades" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110">
+          <img src="assets/images/seb-logo.png" alt="SEB Logo" class="relative h-20 w-auto transition-transform duration-500 group-hover:scale-105">
         </div>
         <div class="p-6">
-          <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Second Edge Blades</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Dystopian fiction delivered as multimedia packets. Prose, music, art, and interactive narrative.</p>
-        </div>
-      </a>
-
-      <!-- Ruby Card -->
-      <a href="projects/ruby.html" class="group card block animate-fade-up delay-5" style="background-color: var(--color-bg);">
-        <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-ruby-green-light);">
-          <img src="assets/images/ruby-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
-          <span class="relative font-display text-3xl font-bold text-center" style="color: var(--color-ruby-green);">Ruby and the Garden Guardian</span>
-        </div>
-        <div class="p-6">
-          <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Ruby and the Garden Guardian</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
-        </div>
-      </a>
-
-      <!-- Hop Twice Card -->
-      <a href="projects/hoptwice.html" class="group card block animate-fade-up delay-6" style="background-color: var(--color-bg);">
-        <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: var(--color-hoptwice-brown-light);">
-          <img src="assets/images/hoptwice-hero.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-500 group-hover:scale-105">
-          <span class="relative font-display text-3xl font-bold" style="color: var(--color-hoptwice-brown);">Hop Twice</span>
-        </div>
-        <div class="p-6">
-          <h3 class="font-display text-xl font-semibold mb-2 group-hover:underline" style="color: var(--color-text);">Hop Twice</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Instrumental mixes for studying, working, and late nights. Built from 20 years of original compositions.</p>
-        </div>
-      </a>
-
-      <!-- The Soft Dark Card -->
-      <a href="projects/softdark.html" class="group card block animate-fade-up delay-7" style="background-color: var(--color-bg);">
-        <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background-color: #E8E0D4;">
-          <img src="assets/images/softdark_hero.jpg?v=2" alt="The Soft Dark creatures" class="absolute inset-0 w-full h-full object-cover opacity-40 transition-transform duration-500 group-hover:scale-105">
-          <img src="assets/images/softdark-logo.png" alt="The Soft Dark" class="relative h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-2">
-            <h3 class="font-display text-xl font-semibold group-hover:underline" style="color: var(--color-text);">The Soft Dark</h3>
-            <span class="text-xs font-bold tracking-widest uppercase px-2 py-0.5 rounded" style="background-color: var(--color-seb-red); color: white;">New</span>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
+            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Listen</span>
+            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
           </div>
-          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">The Soft Dark is a place that's soft... and dark. It's home to a host of creatures that are ferociously timid. And soft, oh so soft.</p>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#8B2030] transition-colors">Second Edge Blades</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">A fictional band fighting a system that weaponizes sound. Transmedia sci-fi.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Gritty</span> <span>#Dystopian</span> <span>#Serious</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: The Soft Dark -->
+      <a href="projects/softdark.html" class="group card block animate-fade-up delay-4 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#E8E0D4]">
+          <img src="assets/images/softdark-cast.png" alt="The Soft Dark Cast" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
+            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:underline">The Soft Dark</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Home to creatures that are ferociously timid. A place that's soft... and dark.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Cute</span> <span>#Mysterious</span> <span>#Hand-drawn</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Tales from the Middle -->
+      <a href="stories.html#tales" class="group card block animate-fade-up delay-5 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-white">
+          <img src="assets/images/neighborly-audit.jpg" alt="Neighborly Audit" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="p-6 border-t border-[#D6CEC3]">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
+            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-2">Tales from the Middle</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Art that audits the human condition. Observations on the gaps between what we say and do.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Philosophical</span> <span>#Honest</span> <span>#Audit</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: Ruby and the Garden Guardian -->
+      <a href="projects/ruby.html" class="group card block animate-fade-up delay-6 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#E6F0EA]">
+          <img src="assets/images/ruby-cover.jpg" alt="Ruby Illustration" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#2D6B3F] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
+            <span class="bg-[#2D6B3F] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#2D6B3F] transition-colors">Ruby & The Guardian</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">A story about bravery being something you have despite being afraid. Children's fiction.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Warm</span> <span>#Sincere</span> <span>#Brave</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 5: Hop Twice -->
+      <a href="projects/hoptwice.html" class="group card block animate-fade-up delay-7 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#F3EDE4]">
+          <img src="assets/images/hoptwice-bunny.jpg" alt="Hop Twice Bunny" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#6B4A2E] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Listen</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#6B4A2E] transition-colors">Hop Twice</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Ambient re-imaginings of 20 years of original compositions. Music for deep work.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Focus</span> <span>#Rest</span> <span>#Ambient</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 6: Short Stories (The Archive) -->
+      <a href="stories.html" class="group card block animate-fade-up delay-8 bg-[#FAF7F2]">
+        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#FAF7F2] border-b border-[#D6CEC3]">
+          <div class="p-8 text-center">
+            <span class="font-mono text-xs text-[#6B6560] leading-relaxed italic">"The air in the room was stale, thick with the scent of ozone and unrecorded history..."</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#6B6560] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-2">Short Stories</h3>
+          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Standalone fiction from the deeper corners of the satchel. Experimental prose.</p>
+          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
+            <span>#Varied</span> <span>#Short</span> <span>#Experimental</span>
+          </div>
         </div>
       </a>
 
@@ -129,71 +173,35 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12">
+  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-
-        <!-- Studio -->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
-          <p class="text-sm leading-relaxed">Fiction, music, and art. One person making things because making things is fun.</p>
+          <p class="text-sm leading-relaxed">One person making things because making things is fun. Fiction, music, and art curated as a collection of worlds.</p>
         </div>
-
-        <!-- Projects -->
-        <div>
-          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Projects</h3>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="projects/seb.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Second Edge Blades</a>
-            <a href="projects/ruby.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Ruby and the Garden Guardian</a>
-            <a href="projects/hoptwice.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Hop Twice</a>
-            <a href="projects/softdark.html" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">The Soft Dark</a>
-          </div>
+        <div class="flex flex-col md:items-end gap-2 text-sm">
+          <a href="https://ckarmstrong.substack.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Substack</a>
+          <a href="https://thepigletssatchel.tumblr.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Tumblr</a>
+          <a href="https://www.youtube.com/@HopTwice" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">YouTube</a>
+          <a href="https://www.etsy.com/shop/ThePigletsSatchel" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Etsy</a>
         </div>
-
-        <!-- Links -->
-        <div>
-          <h3 class="font-display text-base text-[#FAF7F2] mb-3">Elsewhere</h3>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">YouTube</a>
-            <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Substack</a>
-            <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="relative inline-block w-fit hover:text-[#FAF7F2] transition-colors">Shop (Etsy)</a>
-          </div>
-        </div>
-
       </div>
-
       <hr class="border-[#4A453F] mb-6">
-
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-        <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2] transition-colors">
-          <img src="assets/caits/caits-4.svg" alt="C-AITS Level 4" class="h-4 w-auto">
-          <span>Site: C-AITS 4</span>
+      <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
+        <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
+          <img src="assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
+          <span>Human-Led Creation (C-AITS 4)</span>
         </a>
-        <p class="text-[#6B6560]">&copy; The Piglet's Satchel, 2026</p>
+        <span>&copy; 2026</span>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Hamburger menu
     document.getElementById('menu-toggle').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
     });
-
-    // Scroll-triggered reveals
-    const reveals = document.querySelectorAll('.reveal');
-    if (reveals.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      reveals.forEach(el => observer.observe(el));
-    }
   </script>
 
 </body>
