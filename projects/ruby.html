@@ -9,41 +9,38 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
-      </a>
+  <header class="topbar sitewide-topbar">
+    <a href="../index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="../assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../index.html#custom-work">Custom Work</a>
+      <a href="../index.html#notes">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
-      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
-    </div>
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../shop.html">Shop</a>
+    <a href="../index.html#custom-work">Custom Work</a>
+    <a href="../index.html#notes">Blog</a>
+    <a href="../about.html">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
@@ -53,7 +50,7 @@
     <!-- What it is -->
     <div class="space-y-4 text-base leading-relaxed mb-12 animate-fade-up delay-2" style="color: var(--color-text);">
       <p>A children's picture book about courage, curiosity, and the magic hiding in your own back garden.</p>
-      <p>This book came from exploring a story together with my daughter on a family walk one evening. We made the characters on paper and named them. Having just finished the first draft of the Second Edge Blades novel, I thought I would try my hand at turning our fun creative exercise into a proper book. This is the result.</p>
+      <p>It started as one of those small family inventions that could easily have disappeared by the next morning. A walk, a made-up world, a few characters with names, and the feeling that this one deserved to stay. I turned that evening into a real book rather than letting it vanish like most good ideas do.</p>
     </div>
 
     <!-- Preview images -->
@@ -77,9 +74,9 @@
 
         <!-- Sales Content -->
         <div class="w-full md:w-1/2 flex flex-col justify-center">
-          <h2 class="font-display text-3xl font-bold mb-4" style="color: var(--color-ruby-green);">Own the Garden</h2>
+          <h2 class="font-display text-3xl font-bold mb-4" style="color: var(--color-ruby-green);">Bring the Book Home</h2>
           <p class="text-sm leading-relaxed mb-8" style="color: var(--color-text);">
-            Bring the magic of the garden home. A high-quality physical picture book featuring the full story of Ruby and her guardian.
+            A full-colour physical edition of Ruby's story for bedtime reading, gifting, or keeping on the shelf once the garden has gone quiet.
           </p>
           
           <div class="space-y-4">
@@ -101,7 +98,6 @@
     <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">Transparency Ratings</h2>
     <p class="text-sm mb-6" style="color: var(--color-text-muted);">Rated per component using the <a href="../caits.html" class="underline hover:no-underline" style="color: var(--color-accent);">C-AITS scale</a>.</p>
 
-    <!-- DRAFT: CK to confirm these ratings -->
     <div class="space-y-3 mb-12">
       <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
         <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
@@ -111,7 +107,7 @@
       <div class="flex items-center gap-4 p-3 rounded" style="background-color: var(--color-bg-warm);">
         <img src="../assets/caits/caits-3.svg" alt="C-AITS 3" class="w-8 h-8">
         <span class="text-sm font-medium" style="color: var(--color-text);">Illustrations</span>
-        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 3 — Assisted</span>
+        <span class="ml-auto text-xs font-medium" style="color: var(--color-text-muted);">Level 3 — Synthesized</span>
       </div>
     </div>
 
@@ -127,7 +123,14 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
+  <section class="project-shop-shelf max-w-5xl px-6" aria-label="Project shop products">
+    <h2>Ruby & The Guardian Goods</h2>
+    <p>Project-specific prints, objects, and small studio goods appear here when they are linked from the shop data.</p>
+    <div class="product-row" data-shop-preview data-project="ruby" data-limit="4"></div>
+    <a href="../shop.html" class="project-shop-link">View full shop &rarr;</a>
+  </section>
+
+  <footer id="contact" class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
@@ -145,7 +148,7 @@
       <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
         <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
           <img src="../assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
+          <span>Site Code: Level 4 &mdash; Generated</span>
         </a>
         <span>&copy; 2026</span>
       </div>
@@ -158,5 +161,7 @@
     });
   </script>
 
+  <script src="../assets/js/shop-products.js"></script>
+  <script src="../assets/js/shop-render.js"></script>
 </body>
 </html>

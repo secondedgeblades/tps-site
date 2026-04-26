@@ -6,79 +6,81 @@
   <title>Roadmap - The Piglet's Satchel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .segment {
-      height: 8px;
-      width: 32px;
-      border-radius: 4px;
-    }
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .status-badge {
-      display: inline-block;
-      padding: 3px 12px;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-  </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
-      </a>
+  <header class="topbar sitewide-topbar">
+    <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="roadmap.html" class="nav-link relative text-[#E0D8CE]">Roadmap</a>
-        <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#custom-work">Custom Work</a>
+      <a href="index.html#notes">Blog</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
-      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="roadmap.html" class="text-[#E0D8CE]">Roadmap</a>
-        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
-    </div>
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="index.html#projects">Projects</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#custom-work">Custom Work</a>
+    <a href="index.html#notes">Blog</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Page header -->
   <section class="max-w-5xl mx-auto px-6 pt-16 pb-10">
     <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 animate-fade-up delay-1" style="color: var(--color-text);">Roadmap</h1>
-    <p class="text-xl font-light animate-fade-up delay-2" style="color: var(--color-text-muted);">What we're making and where it's at.</p>
+    <p class="text-xl font-light animate-fade-up delay-2" style="color: var(--color-text-muted);">What the satchel is actively building, shaping, and carrying forward.</p>
   </section>
 
   <!-- Roadmap content -->
   <main class="max-w-5xl mx-auto px-6 pb-24">
-    <div id="roadmap-grid" class="grid md:grid-cols-2 gap-8"></div>
+    <div class="max-w-3xl mb-12 text-base leading-relaxed space-y-4 animate-fade-up delay-3" style="color: var(--color-text);">
+      <p>This is not a production board. It is a public snapshot of where the energy is going right now.</p>
+      <p>Some work moves fast. Some work takes longer because it needs to. The point of this page is not to promise dates. It is to show what is alive.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <section class="rounded-xl border p-8 animate-fade-up delay-4" style="border-color: var(--color-border); background-color: var(--color-bg);">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase mb-4" style="color: var(--color-text-muted);">Now</p>
+        <h2 class="font-display text-2xl font-semibold mb-4" style="color: var(--color-text);">Second Edge Blades</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--color-text);">The next packet is the main line of fire. Prose leads. The rest assembles around it.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">Music, visuals, and the interactive edges follow once the core piece is locked.</p>
+      </section>
+
+      <section class="rounded-xl border p-8 animate-fade-up delay-5" style="border-color: var(--color-border); background-color: var(--color-bg);">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase mb-4" style="color: var(--color-text-muted);">Taking Shape</p>
+        <h2 class="font-display text-2xl font-semibold mb-4" style="color: var(--color-text);">Soft Dark and Hop Twice</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--color-text);">The Soft Dark is growing into a fuller world of creatures, art objects, and small physical things. Hop Twice continues to turn the back catalogue into long-form listening pieces.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">These projects are active, but they move in support of the larger studio rhythm rather than dictating it.</p>
+      </section>
+
+      <section class="rounded-xl border p-8 animate-fade-up delay-6" style="border-color: var(--color-border); background-color: var(--color-bg);">
+        <p class="text-xs font-bold tracking-[0.2em] uppercase mb-4" style="color: var(--color-text-muted);">On Deck</p>
+        <h2 class="font-display text-2xl font-semibold mb-4" style="color: var(--color-text);">Merch, Objects, and Experiments</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--color-text);">Physical goods, odd artifacts, and format experiments are part of the plan, but only when they earn their place.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text-muted);">The studio is interested in new forms. It is not interested in filling shelves for the sake of looking busy.</p>
+      </section>
+    </div>
   </main>
 
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
+  <footer id="contact" class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
@@ -96,7 +98,7 @@
       <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
         <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
           <img src="assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
+          <span>Site Code: Level 4 &mdash; Generated</span>
         </a>
         <span>&copy; 2026</span>
       </div>
@@ -119,133 +121,6 @@
       }, { threshold: 0.15 });
       reveals.forEach(el => observer.observe(el));
     }
-  </script>
-
-  <script>
-    const ROADMAP_DATA = {
-      projects: [
-        {
-          "name": "SEB Packet 2",
-          "type": "multi",
-          "steps": [
-            { "name": "Prose", "status": "finished" },
-            { "name": "Music", "status": "not_started" },
-            { "name": "Illustrations", "status": "not_started" },
-            { "name": "CYOA Decision", "status": "not_started" },
-            { "name": "Lore Artifact", "status": "not_started" }
-          ]
-        },
-        {
-          "name": "Hop Twice Video 5",
-          "type": "multi",
-          "steps": [
-            { "name": "Style Chosen", "status": "not_started" },
-            { "name": "Music", "status": "not_started" },
-            { "name": "Visuals", "status": "not_started" }
-          ]
-        },
-        {
-          "name": "Merch Pipeline",
-          "type": "multi",
-          "steps": [
-            { "name": "Ruby Listings", "status": "not_started" },
-            { "name": "Hop Twice Listings", "status": "finished" },
-            { "name": "Soft Dark Listings", "status": "in_progress" },
-            { "name": "SEB Object Stickers", "status": "finished" }
-          ]
-        },
-        { "name": "Echo Chamber 3D", "type": "single", "status": "in_progress" },
-        { "name": "The Soft Dark", "type": "single", "status": "in_progress" },
-        { "name": "Tomb MKII Streaming", "type": "single", "status": "finished" }
-      ]
-    };
-
-    const STATUS_COLORS = {
-      finished:       { bg: '#2D6B3F', text: '#FFFFFF' },
-      in_progress:    { bg: '#6B4226', text: '#FFFFFF' },
-      conceptualised: { bg: '#6B6560', text: '#FFFFFF' },
-      not_started:    { bg: '#E0D8CE', text: '#2D2A26' }
-    };
-
-    const STATUS_LABELS = {
-      finished:       'Finished',
-      in_progress:    'In Progress',
-      conceptualised: 'Conceptualised',
-      not_started:    'Not Started'
-    };
-
-    function buildCard(project) {
-      const card = document.createElement('div');
-      card.className = 'rounded-xl border p-6';
-      card.style.borderColor = 'var(--color-border)';
-      card.style.backgroundColor = 'var(--color-bg)';
-
-      const title = document.createElement('h2');
-      title.className = 'font-display text-xl font-semibold mb-4';
-      title.style.color = 'var(--color-text)';
-      title.textContent = project.name;
-      card.appendChild(title);
-
-      if (project.type === 'multi') {
-        const finished = project.steps.filter(s => s.status === 'finished').length;
-        const total = project.steps.length;
-
-        const countEl = document.createElement('p');
-        countEl.className = 'text-xs mb-3';
-        countEl.style.color = 'var(--color-text-muted)';
-        countEl.textContent = `${finished} of ${total} complete`;
-        card.appendChild(countEl);
-
-        // Segments row
-        const segRow = document.createElement('div');
-        segRow.style.cssText = 'display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px;';
-        project.steps.forEach(step => {
-          const seg = document.createElement('div');
-          seg.className = 'segment';
-          seg.style.backgroundColor = STATUS_COLORS[step.status].bg;
-          segRow.appendChild(seg);
-        });
-        card.appendChild(segRow);
-
-        // Step list
-        const stepList = document.createElement('ul');
-        stepList.style.cssText = 'display: flex; flex-direction: column; gap: 6px;';
-        project.steps.forEach(step => {
-          const item = document.createElement('li');
-          item.style.cssText = 'display: flex; align-items: center; gap: 8px;';
-
-          const dot = document.createElement('span');
-          dot.className = 'status-dot';
-          dot.style.backgroundColor = STATUS_COLORS[step.status].bg;
-
-          const label = document.createElement('span');
-          label.className = 'text-sm';
-          label.style.color = 'var(--color-text)';
-          label.textContent = step.name;
-
-          item.appendChild(dot);
-          item.appendChild(label);
-          stepList.appendChild(item);
-        });
-        card.appendChild(stepList);
-
-      } else {
-        const colors = STATUS_COLORS[project.status];
-        const badge = document.createElement('span');
-        badge.className = 'status-badge';
-        badge.style.backgroundColor = colors.bg;
-        badge.style.color = colors.text;
-        badge.textContent = STATUS_LABELS[project.status];
-        card.appendChild(badge);
-      }
-
-      return card;
-    }
-
-    const grid = document.getElementById('roadmap-grid');
-    ROADMAP_DATA.projects.forEach(project => {
-      grid.appendChild(buildCard(project));
-    });
   </script>
 
 </body>

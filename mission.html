@@ -9,41 +9,38 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
-      </a>
+  <header class="topbar sitewide-topbar">
+    <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#custom-work">Custom Work</a>
+      <a href="index.html#notes">Blog</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
-      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
-    </div>
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="index.html#projects">Projects</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#custom-work">Custom Work</a>
+    <a href="index.html#notes">Blog</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Mission -->
@@ -54,7 +51,7 @@
     </div>
   </main>
 
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
+  <footer id="contact" class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
@@ -72,7 +69,7 @@
       <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
         <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
           <img src="assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
+          <span>Site Code: Level 4 &mdash; Generated</span>
         </a>
         <span>&copy; 2026</span>
       </div>

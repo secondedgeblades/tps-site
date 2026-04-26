@@ -9,47 +9,39 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
-      </a>
+  <header class="topbar sitewide-topbar">
+    <a href="../index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="../assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../index.html#custom-work">Custom Work</a>
+      <a href="../index.html#notes">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-[#4A453F] pt-4">
-      <div class="flex flex-col gap-4 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="../caits.html" class="hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../roadmap.html" class="hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../about.html" class="hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
-    </div>
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../shop.html">Shop</a>
+    <a href="../index.html#custom-work">Custom Work</a>
+    <a href="../index.html#notes">Blog</a>
+    <a href="../about.html">About</a>
+    <a href="#contact">Contact</a>
   </nav>
-
-  <!-- Banner -->
-  <div class="w-full" style="background-color: var(--color-hoptwice-brown-light);">
-    <img src="../assets/images/hoptwice-hero.png" alt="Hop Twice" class="w-full max-w-5xl mx-auto">
-  </div>
 
   <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
 
@@ -59,16 +51,16 @@
 
     <!-- What it is -->
     <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
-      <p>Instrumental music built from CK's back catalogue of original compositions. Each track is reimagined through AI-assisted production into long-form mixes designed for focus, study, and deep work.</p>
-      <p>The source material spans 20 years of songwriting across rock, electronic, acoustic, and everything between. The output is something new: familiar enough to disappear into the background, textured enough to reward attention.</p>
+      <p>Hop Twice turns twenty years of original songs into long-form instrumental worlds built for focus, study, and late-night thinking.</p>
+      <p>The source material comes from across the catalogue, then gets reworked into something softer, slower, and more immersive. The point is not nostalgia. The point is atmosphere you can live inside for an hour at a time.</p>
     </div>
 
     <!-- How it works -->
     <h2 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-text);">How It Works</h2>
 
     <div class="space-y-4 text-base leading-relaxed mb-12" style="color: var(--color-text);">
-      <p>Original tracks are fed through Suno's AI models with carefully tuned style prompts and parameters. The AI reimagines the harmonic and rhythmic structure while preserving the character of the original. A hard rock anthem becomes a swinging trip hop piece. A solo acoustic guitar ballad picks up dusty breaks and Rhodes keys.</p>
-      <p>Each mix runs roughly an hour, paired with looping pencil-sketch animations featuring a floppy rabbit who occasionally hops.</p>
+      <p>Each release begins with one of my own compositions, then pushes it through a different musical lens until it becomes a new listening space with the old bones still inside it. A hard rock song can come back as trip hop. An acoustic piece can return covered in dust, tape hiss, and electric piano.</p>
+      <p>The mixes run long on purpose. They are built to stay with you rather than ask for your attention every thirty seconds. The rabbit helps.</p>
     </div>
 
     <!-- Current styles -->
@@ -94,9 +86,9 @@
 
         <!-- Sales Content -->
         <div class="w-full md:w-3/5 flex flex-col justify-center">
-          <h3 class="font-display text-2xl font-bold mb-4" style="color: var(--color-hoptwice-brown);">High-Quality Audio & Art</h3>
+          <h3 class="font-display text-2xl font-bold mb-4" style="color: var(--color-hoptwice-brown);">Take the Rabbit With You</h3>
           <p class="text-sm leading-relaxed mb-8" style="color: var(--color-text);">
-            Support the artist and get the best possible experience. Purchase lossless audio (FLAC/WAV) and digital art packs for focus and collection.
+            Lossless audio, digital art, and physical pieces for people who want the quiet version to live off-platform too.
           </p>
           
           <div class="space-y-4">
@@ -147,7 +139,14 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
+  <section class="project-shop-shelf max-w-5xl px-6" aria-label="Project shop products">
+    <h2>Hop Twice Goods</h2>
+    <p>Project-specific prints, objects, and small studio goods appear here when they are linked from the shop data.</p>
+    <div class="product-row" data-shop-preview data-project="hoptwice" data-limit="4"></div>
+    <a href="../shop.html" class="project-shop-link">View full shop &rarr;</a>
+  </section>
+
+  <footer id="contact" class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
@@ -165,7 +164,7 @@
       <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
         <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
           <img src="../assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
+          <span>Site Code: Level 4 &mdash; Generated</span>
         </a>
         <span>&copy; 2026</span>
       </div>
@@ -178,5 +177,7 @@
     });
   </script>
 
+  <script src="../assets/js/shop-products.js"></script>
+  <script src="../assets/js/shop-render.js"></script>
 </body>
 </html>

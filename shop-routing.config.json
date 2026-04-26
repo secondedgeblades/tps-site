@@ -1,0 +1,38 @@
+{
+  "defaultProject": "general",
+  "defaultProductUrl": "https://www.etsy.com/shop/ThePigletsSatchel",
+  "etsyShopUrl": "https://www.etsy.com/shop/ThePigletsSatchel",
+  "projects": {
+    "seb": {
+      "name": "Second Edge Blades",
+      "keywords": ["second edge blades", "seb", "echo chamber", "quarry", "signal"]
+    },
+    "softdark": {
+      "name": "The Soft Dark",
+      "keywords": ["soft dark", "flubo", "shim", "hamish", "delilah", "creature"]
+    },
+    "tales": {
+      "name": "Tales from the Middle",
+      "editionSize": 10,
+      "editionUnit": "per size",
+      "keywords": ["tales from the middle", "neighbours", "neighbors", "neighborly", "bedbugs", "bed bugs", "audit", "middle"]
+    },
+    "ruby": {
+      "name": "Ruby & The Guardian",
+      "keywords": ["ruby", "guardian", "garden guardian", "storybook"]
+    },
+    "hoptwice": {
+      "name": "Hop Twice",
+      "keywords": ["hop twice", "ambient", "bunny"]
+    },
+    "stories": {
+      "name": "Short Stories",
+      "keywords": ["short story", "stories", "dark fiction", "fiction"]
+    },
+    "general": {
+      "name": "The Piglet's Satchel",
+      "keywords": ["piglet", "satchel", "studio"]
+    }
+  },
+  "overrides": {}
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | The Piglet's Satchel</title>
+  <meta name="description" content="Prints, objects, and small studio goods from The Piglet's Satchel projects.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="home-shell">
+
+  <div class="studio-window">
+    <header class="topbar">
+      <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+        <img src="assets/images/logo-v2.png" alt="">
+        <span>
+          <strong>The Piglet's Satchel</strong>
+          <small>An anthology studio</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#custom-work">Custom Work</a>
+        <a href="index.html#notes">Blog</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </header>
+
+    <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#custom-work">Custom Work</a>
+      <a href="index.html#notes">Blog</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="shop-page">
+      <section class="shop-hero">
+        <div>
+          <p class="panel-kicker">Shop</p>
+          <h1>Prints and objects from across the satchel.</h1>
+          <p>Browse by project, then follow the product link to buy through the connected shop. This page is built to update from Printify, which is the sensible kind of boring.</p>
+        </div>
+        <a href="https://www.etsy.com/shop/ThePigletsSatchel" class="concept-button dark" target="_blank" rel="noopener">Open Etsy Shop</a>
+      </section>
+
+      <section class="shop-catalog">
+        <div class="shop-filter-row" data-shop-filters="#shop-catalog-grid"></div>
+        <div id="shop-catalog-grid" class="shop-grid-full" data-shop-preview data-project="all" data-limit="200"></div>
+      </section>
+
+      <section class="shop-note">
+        <h2>How this stays organized</h2>
+        <p>Printify product titles, descriptions, tags, and images are synced into local site data. Routing rules assign each product to a project so the homepage, shop page, and project pages all pull from the same source.</p>
+      </section>
+    </main>
+
+    <footer id="contact" class="concept-footer">
+      <div>
+        <img src="assets/images/logo-v2.png" alt="">
+        <p>The Piglet's Satchel<br><span>© 2026 CK Armstrong</span></p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#custom-work">Custom Work</a>
+      </nav>
+      <nav aria-label="Studio links">
+        <a href="about.html">About</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Blog</a>
+        <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+      </nav>
+      <nav aria-label="External links">
+        <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener">Etsy</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(!isHidden));
+    });
+  </script>
+  <script src="assets/js/shop-products.js"></script>
+  <script src="assets/js/shop-render.js"></script>
+</body>
+</html>

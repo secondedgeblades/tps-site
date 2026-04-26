@@ -7,99 +7,80 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="min-h-screen flex flex-col bg-white text-black">
+<body class="min-h-screen flex flex-col tales-page">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="../assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
-      </a>
+  <header class="topbar sitewide-topbar">
+    <a href="../index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="../assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="../index.html#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="../caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="../roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="../about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../index.html#custom-work">Custom Work</a>
+      <a href="../index.html#notes">Blog</a>
+      <a href="../about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../shop.html">Shop</a>
+    <a href="../index.html#custom-work">Custom Work</a>
+    <a href="../index.html#notes">Blog</a>
+    <a href="../about.html">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <main class="flex-1 max-w-4xl mx-auto px-6 py-16 md:py-24">
-
-    <header class="text-center mb-16 animate-fade-up">
-      <h1 class="font-display text-4xl md:text-6xl font-bold mb-4">Tales from the Middle</h1>
-      <p class="text-lg md:text-xl uppercase tracking-[0.2em] opacity-60">The Hypocrisy Audit</p>
+  <main class="tales-main">
+    <header class="tales-header">
+      <p class="panel-kicker">Project</p>
+      <h1>Tales from the Middle</h1>
+      <p class="tales-note">A free-form place for things that matter, things that bother me, and things I just wanted to make.</p>
+      <p class="tales-edition-note">All Tales from the Middle canvas runs are limited to 10 per size.</p>
     </header>
 
-    <!-- The Concept -->
-    <section class="max-w-2xl mx-auto mb-24 text-center animate-fade-up delay-1">
-      <p class="text-lg leading-relaxed italic">
-        "Observations on the gap between what we say and what we do. Art that audits the human condition with clinical honesty."
-      </p>
+    <section class="tales-piece">
+      <img src="../assets/images/neighborly-audit.webp" alt="Neighbours">
+      <h2>Neighbours</h2>
+      <p class="tales-piece-meta">Canvas print. 3 sizes. Limited run of 10 per size.</p>
+      <a href="https://www.etsy.com/ca/listing/4494012966/neighbors-canvas-matte-stretched-wall" class="tales-piece-link" target="_blank" rel="noopener">View on Etsy</a>
     </section>
 
-    <!-- Audit 1: Neighborly -->
-    <article class="mb-32">
-      <div class="reveal mb-12">
-        <img src="../assets/images/neighborly-audit.webp" alt="Neighborly - A Tales from the Middle Audit" class="w-full shadow-2xl border border-black/5">
-      </div>
-      
-      <div class="max-w-2xl mx-auto">
-        <h2 class="font-display text-3xl font-bold mb-6">Audit #01: Neighborly</h2>
-        <div class="space-y-6 text-base md:text-lg leading-relaxed mb-10">
-          <p>We build fences to define our peace, then complain about the silence. We want community but fear the intrusion. 'Neighborly' is the audit of that specific, suburban friction.</p>
-        </div>
-
-        <!-- Conversion: Canvas Print -->
-        <div class="p-8 border-2 border-black bg-black text-white rounded-sm flex flex-col md:items-center text-center">
-          <h3 class="font-display text-2xl font-bold mb-2">Audit Your Space</h3>
-          <p class="text-sm opacity-80 mb-6">High-contrast canvas prints available via Printify/Etsy.</p>
-          <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" class="bg-white text-black px-8 py-3 font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors">
-            Order Canvas Print
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <!-- C-AITS Ratings -->
-    <section class="max-w-2xl mx-auto mb-24 border-t pt-16">
-      <h2 class="font-display text-2xl font-semibold mb-6">Transparency Ratings</h2>
-      <div class="space-y-3">
-        <div class="flex items-center gap-4 p-3 rounded bg-gray-50 border">
-          <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
-          <span class="text-sm font-medium">Philosophy / Text</span>
-          <span class="ml-auto text-xs font-medium opacity-60">Level 0 — The Soul</span>
-        </div>
-        <div class="flex items-center gap-4 p-3 rounded bg-gray-50 border">
-          <img src="../assets/caits/caits-0.svg" alt="C-AITS 0" class="w-8 h-8">
-          <span class="text-sm font-medium">Visual Composition</span>
-          <span class="ml-auto text-xs font-medium opacity-60">Level 0 — The Soul</span>
-        </div>
-      </div>
+    <section class="tales-piece">
+      <img src="../assets/images/bedbugs.png" alt="Bedbugs">
+      <h2>Bedbugs</h2>
+      <p class="tales-piece-meta">Limited run of 10 per size.</p>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
+  <section class="project-shop-shelf max-w-5xl px-6" aria-label="Project shop products">
+    <h2>Tales Prints & Objects</h2>
+    <p>Project-specific prints, objects, and small studio goods appear here when they are linked from the shop data.</p>
+    <div class="product-row" data-shop-preview data-project="tales" data-limit="4"></div>
+    <a href="../shop.html" class="project-shop-link">View full shop &rarr;</a>
+  </section>
+
+  <footer id="contact" class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
     <div class="max-w-5xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8 mb-8">
         <div>
           <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
-          <p class="text-sm leading-relaxed">One person making things because making things is fun. Fiction, music, and art curated as a collection of worlds.</p>
+          <p class="text-sm leading-relaxed">Strange work, carefully made. Art, fiction, music, custom work, and worlds worth wandering through.</p>
         </div>
         <div class="flex flex-col md:items-end gap-2 text-sm">
+          <a href="../shop.html" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Shop</a>
           <a href="https://ckarmstrong.substack.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Substack</a>
           <a href="https://thepigletssatchel.tumblr.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Tumblr</a>
           <a href="https://www.youtube.com/@HopTwice" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">YouTube</a>
@@ -110,7 +91,7 @@
       <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
         <a href="../caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
           <img src="../assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
+          <span>Site Code: Level 4 &mdash; Generated</span>
         </a>
         <span>&copy; 2026</span>
       </div>
@@ -121,19 +102,8 @@
     document.getElementById('menu-toggle').addEventListener('click', function() {
       document.getElementById('mobile-menu')?.classList.toggle('hidden');
     });
-    const reveals = document.querySelectorAll('.reveal');
-    if (reveals.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      reveals.forEach(el => observer.observe(el));
-    }
   </script>
-
+  <script src="../assets/js/shop-products.js"></script>
+  <script src="../assets/js/shop-render.js"></script>
 </body>
 </html>

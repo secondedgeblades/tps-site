@@ -3,195 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Piglet's Satchel | All Projects</title>
+  <title>The Piglet's Satchel | Strange work, carefully made.</title>
+  <meta name="description" content="The Piglet's Satchel is a creative studio for art, fiction, music, custom work, and worlds worth wandering through.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="home-shell">
 
-  <!-- Navigation -->
-  <nav class="bg-[#2D2A26] text-[#FAF7F2] px-6 py-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 hover:text-[#E0D8CE]">
-        <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel" class="h-8 w-auto">
-        <span class="font-display text-xl font-bold tracking-wide">The Piglet's Satchel</span>
+  <div class="studio-window">
+    <header class="topbar">
+      <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+        <img src="assets/images/logo-v2.png" alt="">
+        <span>
+          <strong>The Piglet's Satchel</strong>
+          <small>An anthology studio</small>
+        </span>
       </a>
 
-      <!-- Desktop links -->
-      <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-        <a href="#projects" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Projects</a>
-        <a href="caits.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">C-AITS</a>
-        <a href="roadmap.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Roadmap</a>
-        <a href="about.html" class="nav-link relative hover:text-[#E0D8CE] transition-colors">About</a>
-        <a href="https://ckarmstrong.substack.com" class="nav-link relative hover:text-[#E0D8CE] transition-colors">Newsletter</a>
-      </div>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="shop.html">Shop</a>
+        <a href="#custom-work">Custom Work</a>
+        <a href="#notes">Blog</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <!-- Hamburger button -->
-      <button id="menu-toggle" class="md:hidden p-2 hover:text-[#E0D8CE]" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
       </button>
-    </div>
-  </nav>
+    </header>
 
-  <!-- Hero -->
-  <header class="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
-    <img src="assets/images/logo-v2.png" alt="" class="h-28 w-auto mx-auto mb-6 animate-fade-in">
-    <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 animate-fade-up delay-1" style="color: var(--color-text);">A rummage through the satchel</h1>
-    <p class="text-lg md:text-xl leading-relaxed font-light animate-fade-up delay-2 max-w-2xl mx-auto" style="color: var(--color-text-muted);">Making things is fun. Feeling things is fun. These are the worlds being built inside the Piglet's Satchel.</p>
-    <hr class="divider max-w-xs mx-auto mt-12 animate-fade-in delay-4">
-  </header>
+    <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+      <a href="#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="#custom-work">Custom Work</a>
+      <a href="#notes">Blog</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- Project Grid -->
-  <main id="projects" class="max-w-6xl mx-auto px-6 pb-24">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <main>
+      <section class="concept-hero">
+        <div class="hero-text">
+          <h1>Strange work, carefully made.</h1>
+          <div class="short-rule"></div>
+          <p>The Piglet's Satchel is a creative studio for art, fiction, music, custom work, and worlds worth wandering through.</p>
+          <div class="concept-actions">
+            <a href="#projects" class="concept-button dark">Explore Projects</a>
+            <a href="#custom-work" class="concept-button light">View Custom Work</a>
+          </div>
+        </div>
 
-      <!-- Card 1: Second Edge Blades -->
-      <a href="projects/seb.html" class="group card block animate-fade-up delay-3 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-black">
-          <img src="assets/images/seb-hero.webp" alt="Second Edge Blades" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110">
-          <img src="assets/images/seb-logo.png" alt="SEB Logo" class="relative h-20 w-auto transition-transform duration-500 group-hover:scale-105">
+        <div class="hero-collage" aria-label="A collage of The Piglet's Satchel project artwork">
+          <img class="collage-logo" src="assets/images/logo-v2.png" alt="">
+          <img class="paper-slip slip-seb" src="assets/images/seb-hero.webp" alt="">
+          <img class="paper-slip slip-soft" src="assets/images/softdark-cast.webp" alt="">
+          <img class="paper-slip slip-tales" src="assets/images/neighborly-audit.webp" alt="">
+          <img class="paper-slip slip-ruby" src="assets/images/ruby-cover.webp" alt="">
+          <img class="paper-slip slip-hop" src="assets/images/hoptwice-bunny.webp" alt="">
         </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
-            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Listen</span>
-            <span class="bg-[#8B2030] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#8B2030] transition-colors">Second Edge Blades</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">A fictional band fighting a system that weaponizes sound. Transmedia sci-fi.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Gritty</span> <span>#Dystopian</span> <span>#Serious</span>
-          </div>
-        </div>
-      </a>
+      </section>
 
-      <!-- Card 2: The Soft Dark -->
-      <a href="projects/softdark.html" class="group card block animate-fade-up delay-4 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#E8E0D4]">
-          <img src="assets/images/softdark-cast.webp" alt="The Soft Dark Cast" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+      <section id="projects" class="featured-worlds">
+        <div class="section-line-head">
+          <h2>Projects</h2>
+          <a href="#projects">View all projects</a>
         </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
-            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2 group-hover:underline">The Soft Dark</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Home to creatures that are ferociously timid. A place that's soft... and dark.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Cute</span> <span>#Mysterious</span> <span>#Hand-drawn</span>
-          </div>
-        </div>
-      </a>
 
-      <!-- Card 3: Tales from the Middle -->
-      <a href="projects/tales.html" class="group card block animate-fade-up delay-5 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-white">
-          <img src="assets/images/neighborly-audit.webp" alt="Neighborly Audit" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        </div>
-        <div class="p-6 border-t border-[#D6CEC3]">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
-            <span class="bg-[#2D2A26] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2">Tales from the Middle</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Art that audits the human condition. Observations on the gaps between what we say and do.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Philosophical</span> <span>#Honest</span> <span>#Audit</span>
-          </div>
-        </div>
-      </a>
+        <div class="world-strip">
+          <a href="projects/seb.html" class="world-card">
+            <img src="assets/images/seb-hero.webp" alt="Second Edge Blades artwork">
+            <div class="world-card-copy">
+              <p>#read · #listen · #view</p>
+              <h3>Second Edge Blades</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
 
-      <!-- Card 4: Ruby and the Garden Guardian -->
-      <a href="projects/ruby.html" class="group card block animate-fade-up delay-6 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#E6F0EA]">
-          <img src="assets/images/ruby-cover.webp" alt="Ruby Illustration" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-        </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#2D6B3F] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
-            <span class="bg-[#2D6B3F] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">View</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#2D6B3F] transition-colors">Ruby & The Guardian</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">A story about bravery being something you have despite being afraid. Children's fiction.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Warm</span> <span>#Sincere</span> <span>#Brave</span>
-          </div>
-        </div>
-      </a>
+          <a href="projects/softdark.html" class="world-card">
+            <img src="assets/images/softdark-cast.webp" alt="The Soft Dark creature cast">
+            <div class="world-card-copy">
+              <p>#view · #collect</p>
+              <h3>The Soft Dark</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
 
-      <!-- Card 5: Hop Twice -->
-      <a href="projects/hoptwice.html" class="group card block animate-fade-up delay-7 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#F3EDE4]">
-          <img src="assets/images/hoptwice-bunny.webp" alt="Hop Twice Bunny" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#6B4A2E] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Listen</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-[#6B4A2E] transition-colors">Hop Twice</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Ambient re-imaginings of 20 years of original compositions. Music for deep work.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Focus</span> <span>#Rest</span> <span>#Ambient</span>
-          </div>
-        </div>
-      </a>
+          <a href="projects/tales.html" class="world-card">
+            <img src="assets/images/neighborly-audit.webp" alt="Tales from the Middle artwork">
+            <div class="world-card-copy">
+              <p>#read · #view</p>
+              <h3>Tales from the Middle</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
 
-      <!-- Card 6: Short Stories (The Archive) -->
-      <a href="stories.html" class="group card block animate-fade-up delay-8 bg-[#FAF7F2]">
-        <div class="h-56 flex items-center justify-center relative overflow-hidden bg-[#FAF7F2] border-b border-[#D6CEC3]">
-          <div class="p-8 text-center">
-            <span class="font-mono text-xs text-[#6B6560] leading-relaxed italic">"The air in the room was stale, thick with the scent of ozone and unrecorded history..."</span>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-[#6B6560] text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1 rounded">Read</span>
-          </div>
-          <h3 class="font-display text-2xl font-bold mb-2">Short Stories</h3>
-          <p class="text-sm leading-relaxed mb-4 text-[#6B6560]">Standalone fiction from the deeper corners of the satchel. Experimental prose.</p>
-          <div class="flex flex-wrap gap-2 opacity-60 text-xs italic font-medium">
-            <span>#Varied</span> <span>#Short</span> <span>#Experimental</span>
-          </div>
-        </div>
-      </a>
+          <a href="projects/ruby.html" class="world-card">
+            <img src="assets/images/ruby-cover.webp" alt="Ruby and the Guardian illustration">
+            <div class="world-card-copy">
+              <p>#read · #view</p>
+              <h3>Ruby &amp; The Guardian</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
 
-    </div>
-  </main>
+          <a href="projects/hoptwice.html" class="world-card">
+            <img src="assets/images/hoptwice-bunny.webp" alt="Hop Twice artwork">
+            <div class="world-card-copy">
+              <p>#listen</p>
+              <h3>Hop Twice</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
 
-  <!-- Footer -->
-  <footer class="bg-[#2D2A26] text-[#B8B0A6] px-6 py-12 mt-auto">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
-        <div>
-          <h3 class="font-display text-lg text-[#FAF7F2] mb-3">The Piglet's Satchel</h3>
-          <p class="text-sm leading-relaxed">One person making things because making things is fun. Fiction, music, and art curated as a collection of worlds.</p>
+          <a href="stories.html" class="world-card story-card">
+            <div class="story-preview">
+              <p>Dark fiction, unsettling fragments, and experimental prose.</p>
+            </div>
+            <div class="world-card-copy">
+              <p>#read</p>
+              <h3>Short Stories</h3>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
         </div>
-        <div class="flex flex-col md:items-end gap-2 text-sm">
-          <a href="https://ckarmstrong.substack.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Substack</a>
-          <a href="https://thepigletssatchel.tumblr.com" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Tumblr</a>
-          <a href="https://www.youtube.com/@HopTwice" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">YouTube</a>
-          <a href="https://www.etsy.com/shop/ThePigletsSatchel" class="hover:text-[#FAF7F2] transition-colors underline decoration-[#4A453F] underline-offset-4">Etsy</a>
-        </div>
+      </section>
+
+      <section class="lower-panels">
+        <article id="shop" class="panel shop-panel">
+          <div class="panel-head">
+            <h2>From the Shop</h2>
+            <a href="shop.html">View shop →</a>
+          </div>
+          <p>Prints and objects from across the projects.</p>
+          <div class="product-row" data-shop-preview data-project="all" data-limit="4"></div>
+        </article>
+
+        <article id="custom-work" class="panel custom-panel">
+          <p class="panel-kicker">Custom Work</p>
+          <h2>Need something made?</h2>
+          <p>Illustration, creature placement, visual concepts, story assets, cover art, music-adjacent art, and small studio goods.</p>
+          <div class="service-icons">
+            <span>Illustration</span>
+            <span>Creature Placement</span>
+            <span>Project Support</span>
+            <span>Objects &amp; Prints</span>
+          </div>
+          <a href="#contact" class="inline-link">Start a custom project →</a>
+        </article>
+
+        <article id="notes" class="panel notes-panel-concept">
+          <p class="panel-kicker">Notes from the Satchel</p>
+          <h2>Journal &amp; studio notes</h2>
+          <p>Process notes, project updates, releases, stray thoughts, and the occasional sharp object disguised as an idea.</p>
+          <a href="https://ckarmstrong.substack.com" class="concept-button dark" target="_blank" rel="noopener">Read the Notes</a>
+        </article>
+      </section>
+
+      <section class="creator-strip">
+        <img src="assets/images/logo-v2.png" alt="">
+        <p>The Piglet's Satchel is the creative studio of CK Armstrong. It collects illustration, fiction, music, and custom work under one roof without forcing them to become the same thing.</p>
+        <a href="about.html">About the Studio →</a>
+      </section>
+    </main>
+
+    <footer id="contact" class="concept-footer">
+      <div>
+        <img src="assets/images/logo-v2.png" alt="">
+        <p>The Piglet's Satchel<br><span>© 2026 CK Armstrong</span></p>
       </div>
-      <hr class="border-[#4A453F] mb-6">
-      <div class="flex items-center justify-between text-[10px] tracking-widest uppercase">
-        <a href="caits.html" class="flex items-center gap-2 hover:text-[#FAF7F2]">
-          <img src="assets/caits/caits-4.svg" alt="" class="h-3 w-auto opacity-70">
-          <span>Human-Led Creation (C-AITS 4)</span>
-        </a>
-        <span>&copy; 2026</span>
-      </div>
-    </div>
-  </footer>
+      <nav aria-label="Footer navigation">
+        <a href="#projects">Projects</a>
+        <a href="shop.html">Shop</a>
+        <a href="#custom-work">Custom Work</a>
+      </nav>
+      <nav aria-label="Studio links">
+        <a href="about.html">About</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Blog</a>
+        <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+      </nav>
+      <nav aria-label="External links">
+        <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener">Etsy</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Contact</a>
+      </nav>
+    </footer>
+  </div>
 
   <script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(!isHidden));
     });
   </script>
-
+  <script src="assets/js/shop-products.js"></script>
+  <script src="assets/js/shop-render.js"></script>
 </body>
 </html>
