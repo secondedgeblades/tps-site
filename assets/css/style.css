@@ -301,6 +301,10 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
+.btn[style*="background-color"] {
+  color: #fff9f0;
+}
+
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-1px);
@@ -628,15 +632,10 @@ img {
   margin: 2rem 0;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
+.reveal,
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 .footer-bottom {
@@ -789,7 +788,7 @@ img {
 /* Concept homepage */
 .home-shell {
   min-height: 100vh;
-  padding: clamp(0.75rem, 2vw, 1.75rem);
+  padding: clamp(0.65rem, 1.6vw, 1.45rem);
   background:
     radial-gradient(circle at 50% 0%, rgba(255,255,255,0.85), rgba(244,238,229,0.72) 46%, rgba(222,211,196,0.72) 100%),
     url('../images/textures/worn-paper.jpg');
@@ -801,7 +800,7 @@ img {
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(45, 42, 38, 0.18);
-  border-radius: 14px;
+  border-radius: 13px;
   background: rgba(252, 249, 243, 0.86);
   box-shadow: 0 28px 70px rgba(45, 42, 38, 0.18);
 }
@@ -811,18 +810,31 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  min-height: 92px;
-  padding: 1rem 1.7rem;
+  min-height: 82px;
+  padding: 0.75rem clamp(1.2rem, 2.4vw, 1.75rem);
   border-bottom: 1px solid rgba(45, 42, 38, 0.16);
 }
 
 .sitewide-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: rgba(252, 249, 243, 0.9);
+  backdrop-filter: blur(12px);
 }
 
 body:not(.home-shell) > .topbar,
 body:not(.home-shell) > .mobile-nav {
   width: 100%;
+}
+
+body:not(.home-shell) main {
+  width: min(100%, 980px);
+}
+
+body:not(.home-shell) main > .mb-8:first-child img {
+  max-height: 112px;
+  margin: 0 auto;
 }
 
 .studio-brand {
@@ -833,8 +845,8 @@ body:not(.home-shell) > .mobile-nav {
 }
 
 .studio-brand img {
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   filter: grayscale(0.15);
 }
@@ -861,7 +873,7 @@ body:not(.home-shell) > .mobile-nav {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: clamp(1.3rem, 3vw, 3.1rem);
+  gap: clamp(1.2rem, 2.8vw, 3rem);
   color: var(--color-ink);
   font-size: 0.76rem;
   font-weight: 600;
@@ -911,23 +923,28 @@ body:not(.home-shell) > .mobile-nav {
 
 .concept-hero {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(420px, 1fr);
-  gap: clamp(2rem, 6vw, 6rem);
+  grid-template-columns: minmax(320px, 0.64fr) minmax(500px, 1fr);
+  gap: clamp(3rem, 7vw, 7.5rem);
   align-items: center;
-  padding: clamp(2.5rem, 6vw, 5.2rem) clamp(1.7rem, 4vw, 4rem) 2.2rem;
+  padding: clamp(2rem, 4.8vw, 4.35rem) clamp(1.5rem, 3.7vw, 3.7rem) 1.75rem;
 }
 
 .hero-text {
-  max-width: 530px;
+  max-width: 610px;
   margin-left: clamp(0rem, 8vw, 6.8rem);
 }
 
 .hero-text h1 {
   margin: 0;
   color: var(--color-ink);
-  font-size: clamp(3.1rem, 5.4vw, 5.7rem);
+  font-size: clamp(3.05rem, 3.9vw, 4.35rem);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.12;
+}
+
+.hero-text h1 span {
+  display: block;
+  white-space: nowrap;
 }
 
 .short-rule {
@@ -979,78 +996,22 @@ body:not(.home-shell) > .mobile-nav {
 
 .hero-collage {
   position: relative;
-  min-height: clamp(330px, 34vw, 510px);
-  background:
-    radial-gradient(ellipse at 52% 62%, rgba(92,75,57,0.14), transparent 56%),
-    linear-gradient(90deg, transparent, rgba(228,218,204,0.6) 42%, transparent 86%);
+  min-height: clamp(300px, 29vw, 410px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-collage::before {
-  content: '';
-  position: absolute;
-  left: 2%;
-  right: 4%;
-  bottom: 9%;
-  height: 32%;
-  border-radius: 50%;
-  background: rgba(60, 48, 38, 0.12);
-  filter: blur(24px);
-}
-
-.collage-logo {
-  position: absolute;
-  left: 37%;
-  top: 34%;
-  z-index: 5;
-  width: clamp(150px, 18vw, 245px);
-  filter: drop-shadow(0 18px 18px rgba(45,42,38,0.24));
-}
-
-.paper-slip {
-  position: absolute;
-  z-index: 2;
-  width: clamp(118px, 13vw, 205px);
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border: 1px solid rgba(45, 42, 38, 0.24);
-  background: #f6f0e7;
-  padding: 0.35rem;
-  box-shadow: 0 14px 24px rgba(45,42,38,0.16);
-  filter: saturate(0.82) contrast(0.92);
-}
-
-.slip-seb {
-  left: 11%;
-  top: 43%;
-  transform: rotate(-8deg);
-}
-
-.slip-soft {
-  left: 26%;
-  top: 19%;
-  transform: rotate(5deg);
-}
-
-.slip-tales {
-  left: 50%;
-  top: 10%;
-  transform: rotate(-7deg);
-}
-
-.slip-ruby {
-  right: 11%;
-  top: 28%;
-  transform: rotate(6deg);
-}
-
-.slip-hop {
-  right: 24%;
-  bottom: 12%;
-  transform: rotate(-3deg);
+.satchel-hero-art {
+  width: min(100%, 720px);
+  height: auto;
+  margin-left: clamp(2rem, 5vw, 5rem);
+  mix-blend-mode: multiply;
+  filter: saturate(0.92) contrast(0.96);
 }
 
 .featured-worlds {
-  padding: 0 clamp(1.7rem, 4vw, 2.2rem) 1.35rem;
+  padding: 0 clamp(1.5rem, 3.7vw, 2.2rem) 1.35rem;
 }
 
 .section-line-head,
@@ -1168,7 +1129,7 @@ body:not(.home-shell) > .mobile-nav {
   display: grid;
   grid-template-columns: minmax(0, 1.24fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.85rem;
-  padding: 0 2.2rem 1.15rem;
+  padding: 0 clamp(1.5rem, 3.7vw, 2.2rem) 1.15rem;
 }
 
 .panel {
@@ -1671,6 +1632,10 @@ body:not(.home-shell) > .mobile-nav {
     font-size: 3.05rem;
   }
 
+  .hero-text h1 span {
+    white-space: normal;
+  }
+
   .concept-actions,
   .concept-actions .concept-button {
     width: 100%;
@@ -1680,15 +1645,9 @@ body:not(.home-shell) > .mobile-nav {
     min-height: 300px;
   }
 
-  .collage-logo {
-    left: 34%;
-    top: 36%;
-    width: 140px;
-  }
-
-  .paper-slip {
-    width: 118px;
-    padding: 0.25rem;
+  .satchel-hero-art {
+    width: min(112%, 680px);
+    margin-left: 0;
   }
 
   .section-line-head {
@@ -1744,5 +1703,32 @@ body:not(.home-shell) > .mobile-nav {
   .tales-main {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  body:not(.home-shell) main {
+    padding-top: 2rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  body:not(.home-shell) main > .mb-8:first-child {
+    margin-bottom: 1.25rem !important;
+  }
+
+  body:not(.home-shell) main > .mb-8:first-child img {
+    max-height: 70px;
+  }
+
+  body:not(.home-shell) h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.08 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  body:not(.home-shell) .grid.grid-cols-3 {
+    gap: 0.55rem !important;
+  }
+
+  .project-shop-shelf {
+    margin: 1.8rem 1rem;
   }
 }
