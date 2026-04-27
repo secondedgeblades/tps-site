@@ -208,7 +208,7 @@ img {
 }
 
 .hero-art img {
-  width: min(250px, 68%);
+  width: min(125px, 34%);
   height: auto;
   position: relative;
   z-index: 1;
