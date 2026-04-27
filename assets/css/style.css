@@ -1732,3 +1732,239 @@ body:not(.home-shell) main > .mb-8:first-child img {
     margin: 1.8rem 1rem;
   }
 }
+
+/* --- Inspiration Restore Styles --- */
+
+.cart-icon {
+  margin-left: 0.5rem;
+  color: var(--color-ink);
+  opacity: 0.7;
+}
+
+.cart-icon:hover {
+  opacity: 1;
+}
+
+.shop-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+  object-fit: cover;
+  border: 1px solid rgba(45, 42, 38, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.shop-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.shop-item small {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+
+.service-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-muted);
+}
+
+.service-item span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.signup-form input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(45, 42, 38, 0.15);
+  background: rgba(255, 255, 255, 0.4);
+  font-family: 'Newsreader', serif;
+  font-size: 0.9rem;
+}
+
+.form-fineprint {
+  font-size: 0.7rem !important;
+  color: var(--color-muted);
+  margin-top: 0.5rem !important;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.footer-brand p + p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-top: 0.1rem;
+}
+
+.nav-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-bottom: 0.8rem !important;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--color-ink);
+}
+
+@media (max-width: 1024px) {
+  .shop-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .signup-form {
+    flex-direction: column;
+  }
+  .service-icons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Form Styles --- */
+
+.contact-section {
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 3.7vw, 2.2rem);
+  border-top: 1px solid rgba(45, 42, 38, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-family: 'Young Serif', Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+
+.contact-section p {
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.custom-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(45, 42, 38, 0.18);
+  background: rgba(255, 255, 255, 0.6);
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  color: var(--color-ink);
+  border-radius: 4px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-submit {
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media (max-width: 680px) {
+  .custom-form {
+    grid-template-columns: 1fr;
+  }
+}
