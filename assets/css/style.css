@@ -1971,7 +1971,8 @@ body:not(.home-shell) main > .mb-8:first-child img {
 
 /* Force hero logo size reduction */
 .satchel-hero-art {
-  max-width: 125px !important;
+  max-width: 80px !important;
   height: auto;
   margin: 0 auto;
 }
+
