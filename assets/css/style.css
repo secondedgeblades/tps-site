@@ -922,87 +922,100 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 .concept-hero {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem) 2rem;
+  justify-content: flex-start;
+  min-height: clamp(400px, 40vw, 520px);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4rem);
+  overflow: hidden;
 }
 
 .hero-text {
-  flex: 1;
-  max-width: 610px;
-  margin-left: clamp(0rem, 6vw, 6.8rem);
+  position: relative;
+  z-index: 10;
+  max-width: 580px;
+  padding: 2rem;
+  background: rgba(252, 249, 243, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 4px;
+  margin-left: clamp(0rem, 4vw, 6rem);
 }
 
 .hero-text h1 {
   margin: 0;
   color: var(--color-ink);
-  font-size: clamp(3.05rem, 3.9vw, 4.35rem);
+  font-size: clamp(2.8rem, 4vw, 4.2rem);
   font-weight: 400;
-  line-height: 1.12;
+  line-height: 1.1;
 }
 
 .short-rule {
-  width: 58px;
+  width: 50px;
   height: 1px;
-  margin: 1.45rem 0 1.3rem;
+  margin: 1.2rem 0 1.2rem;
   background: #b88955;
 }
 
 .hero-text p {
   margin: 0;
-  max-width: 410px;
+  max-width: 440px;
   color: var(--color-muted);
-  font-size: 1.1rem;
-  line-height: 1.48;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .concept-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1.65rem;
-}
-
-.concept-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0.82rem 1.45rem;
-  border: 1px solid rgba(45, 42, 38, 0.28);
-  border-radius: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.concept-button.dark {
-  background: #34312d;
-  color: #fbf8f2;
-}
-
-.concept-button.light {
-  background: rgba(255,255,255,0.28);
-  color: var(--color-muted);
+  margin-top: 1.8rem;
 }
 
 .hero-collage {
-  flex: 0 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  right: clamp(-2rem, 2vw, 4rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .satchel-hero-art {
-  width: clamp(240px, 25vw, 380px);
+  width: clamp(300px, 35vw, 580px);
   height: auto;
   mix-blend-mode: multiply;
-  filter: saturate(0.92) contrast(0.96);
+  filter: saturate(0.85) contrast(0.98);
+  opacity: 0.9;
+}
+
+@media (max-width: 760px) {
+  .concept-hero {
+    justify-content: center;
+    padding: 3rem 1rem;
+  }
+  
+  .hero-text {
+    margin-left: 0;
+    text-align: center;
+    background: rgba(252, 249, 243, 0.82);
+    box-shadow: 0 10px 30px rgba(45, 42, 38, 0.1);
+  }
+
+  .short-rule {
+    margin: 1.2rem auto;
+  }
+
+  .concept-actions {
+    justify-content: center;
+  }
+
+  .hero-collage {
+    right: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0.4; /* Faded when directly behind text */
+  }
 }
 
 .featured-worlds {
