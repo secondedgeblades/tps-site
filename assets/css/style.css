@@ -1968,3 +1968,10 @@ body:not(.home-shell) main > .mb-8:first-child img {
     grid-template-columns: 1fr;
   }
 }
+
+/* Force hero logo size reduction */
+.satchel-hero-art {
+  max-width: 125px !important;
+  height: auto;
+  margin: 0 auto;
+}
