@@ -922,16 +922,17 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 .concept-hero {
-  display: grid;
-  grid-template-columns: minmax(320px, 0.64fr) minmax(500px, 1fr);
-  gap: clamp(3rem, 7vw, 7.5rem);
+  display: flex;
   align-items: center;
-  padding: clamp(2rem, 4.8vw, 4.35rem) clamp(1.5rem, 3.7vw, 3.7rem) 1.75rem;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem) 2rem;
 }
 
 .hero-text {
+  flex: 1;
   max-width: 610px;
-  margin-left: clamp(0rem, 8vw, 6.8rem);
+  margin-left: clamp(0rem, 6vw, 6.8rem);
 }
 
 .hero-text h1 {
@@ -940,11 +941,6 @@ body:not(.home-shell) main > .mb-8:first-child img {
   font-size: clamp(3.05rem, 3.9vw, 4.35rem);
   font-weight: 400;
   line-height: 1.12;
-}
-
-.hero-text h1 span {
-  display: block;
-  white-space: nowrap;
 }
 
 .short-rule {
@@ -995,17 +991,16 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 .hero-collage {
+  flex: 0 0 auto;
   position: relative;
-  min-height: clamp(300px, 29vw, 410px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .satchel-hero-art {
-  width: min(100%, 720px);
+  width: clamp(240px, 25vw, 380px);
   height: auto;
-  margin-left: clamp(2rem, 5vw, 5rem);
   mix-blend-mode: multiply;
   filter: saturate(0.92) contrast(0.96);
 }
@@ -1554,17 +1549,18 @@ body:not(.home-shell) main > .mb-8:first-child img {
   }
 
   .concept-hero {
-    grid-template-columns: 1fr;
-    padding-top: 2.4rem;
+    flex-direction: row; /* Stay side-by-side */
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .hero-text {
-    max-width: 720px;
+    max-width: 55%;
     margin-left: 0;
   }
 
-  .hero-collage {
-    min-height: 360px;
+  .satchel-hero-art {
+    width: clamp(180px, 20vw, 300px);
   }
 
   .world-strip {
@@ -1581,155 +1577,35 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 @media (max-width: 760px) {
-  .home-shell {
-    padding: 0;
-  }
-
-  .studio-window {
-    border: 0;
-    border-radius: 0;
-  }
-
-  .topbar {
-    min-height: 76px;
-    padding: 0.8rem 1rem;
-  }
-
-  .studio-brand {
-    min-width: 0;
-    gap: 0.72rem;
-  }
-
-  .studio-brand img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .studio-brand strong {
-    font-size: 0.84rem;
-    letter-spacing: 0.14em;
-  }
-
-  .studio-brand small {
-    font-size: 0.6rem;
-    letter-spacing: 0.16em;
-  }
-
-  .concept-hero,
-  .featured-worlds,
-  .lower-panels,
-  .creator-strip,
-  .concept-footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .concept-hero {
-    gap: 1.6rem;
+    flex-direction: column-reverse; /* Stacks on mobile */
+    align-items: center;
+    text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 3.05rem;
+  .hero-text {
+    max-width: 100%;
   }
 
-  .hero-text h1 span {
-    white-space: normal;
+  .hero-text p {
+    margin: 0 auto;
   }
 
-  .concept-actions,
-  .concept-actions .concept-button {
-    width: 100%;
+  .short-rule {
+    margin: 1.45rem auto 1.3rem;
   }
 
-  .hero-collage {
-    min-height: 300px;
+  .concept-actions {
+    justify-content: center;
   }
 
   .satchel-hero-art {
-    width: min(112%, 680px);
-    margin-left: 0;
+    width: 240px;
+    margin-bottom: 1rem;
   }
-
-  .section-line-head {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
+  
   .world-strip {
     grid-template-columns: 1fr;
-  }
-
-  .world-card {
-    display: grid;
-    grid-template-columns: 112px minmax(0, 1fr);
-  }
-
-  .world-card img,
-  .story-preview {
-    height: 116px;
-    min-height: 116px;
-    aspect-ratio: auto;
-  }
-
-  .world-card-copy {
-    min-height: 116px;
-  }
-
-  .product-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .creator-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .creator-strip img {
-    display: none;
-  }
-
-  .concept-footer {
-    grid-template-columns: 1fr;
-  }
-
-  .shop-hero {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-
-  .shop-grid-full {
-    grid-template-columns: 1fr;
-  }
-
-  .tales-main {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  body:not(.home-shell) main {
-    padding-top: 2rem !important;
-    padding-bottom: 2.5rem !important;
-  }
-
-  body:not(.home-shell) main > .mb-8:first-child {
-    margin-bottom: 1.25rem !important;
-  }
-
-  body:not(.home-shell) main > .mb-8:first-child img {
-    max-height: 70px;
-  }
-
-  body:not(.home-shell) h1 {
-    font-size: 2.4rem !important;
-    line-height: 1.08 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  body:not(.home-shell) .grid.grid-cols-3 {
-    gap: 0.55rem !important;
-  }
-
-  .project-shop-shelf {
-    margin: 1.8rem 1rem;
   }
 }
 
@@ -1968,11 +1844,3 @@ body:not(.home-shell) main > .mb-8:first-child img {
     grid-template-columns: 1fr;
   }
 }
-
-/* Force hero logo size reduction */
-.satchel-hero-art {
-  max-width: 80px !important;
-  height: auto;
-  margin: 0 auto;
-}
-
