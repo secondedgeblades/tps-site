@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | The Piglet's Satchel</title>
+  <meta name="description" content="Privacy policy for The Piglet's Satchel website and inquiry forms.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <header class="topbar sitewide-topbar">
+    <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An anthology studio</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#custom-work">Custom Work</a>
+      <a href="about.html">About</a>
+      <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Journal</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="index.html#projects">Projects</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#custom-work">Custom Work</a>
+    <a href="about.html">About</a>
+    <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Journal</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24">
+    <h1 class="font-display text-4xl md:text-5xl font-bold mb-10" style="color: var(--color-text);">Privacy Policy</h1>
+
+    <div class="space-y-6 text-base leading-relaxed" style="color: var(--color-text);">
+      <p>This site collects only the information you choose to send through the newsletter signup form or the custom project inquiry form.</p>
+
+      <p>Form submissions are processed by FormSubmit and forwarded to the studio inbox at <a href="mailto:secondedgeblades@gmail.com" class="underline" style="color: var(--color-accent);">secondedgeblades@gmail.com</a>. That means your message contents, email address, and any other details you enter pass through FormSubmit in order to reach the inbox.</p>
+
+      <p>Newsletter signups submitted through this site are handled manually. Submitting the form does not create a direct Substack account on your behalf. It sends your email address to the studio inbox so the request can be handled there.</p>
+
+      <p>This site also links to third-party services including Substack, Etsy, Blurb, Printify-hosted product pages, Tumblr, and YouTube. If you follow those links, their privacy practices apply on their own sites.</p>
+
+      <p>No effort is made here to sell, rent, or trade your information. If you want a form submission deleted, send a request to <a href="mailto:secondedgeblades@gmail.com?subject=Privacy%20Request" class="underline" style="color: var(--color-accent);">secondedgeblades@gmail.com</a>.</p>
+
+      <p>Last updated: April 27, 2026.</p>
+    </div>
+  </main>
+
+  <footer class="concept-footer">
+    <div>
+      <img src="assets/images/logo-v2.png" alt="">
+      <p>The Piglet's Satchel<br><span>© 2026 CK Armstrong</span></p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <nav aria-label="Studio links">
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <nav aria-label="External links">
+      <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+      <a href="mailto:secondedgeblades@gmail.com">Email</a>
+    </nav>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(!isHidden));
+    });
+  </script>
+</body>
+</html>

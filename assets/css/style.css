@@ -1156,6 +1156,12 @@ body:not(.home-shell) main > .mb-8:first-child img {
   line-height: 1.42;
 }
 
+.notes-panel-concept {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .panel-kicker {
   margin: 0 0 0.55rem !important;
   color: var(--color-ink) !important;
@@ -1477,6 +1483,14 @@ body:not(.home-shell) main > .mb-8:first-child img {
 
 .notes-panel-concept .concept-button {
   margin-top: 1rem;
+}
+
+.notes-panel-concept .signup-form {
+  margin-top: 1rem;
+}
+
+.notes-panel-concept .form-fineprint {
+  margin-top: 0.55rem !important;
 }
 
 .creator-strip {

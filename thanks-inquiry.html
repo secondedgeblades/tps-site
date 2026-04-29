@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | The Piglet's Satchel</title>
-  <meta name="description" content="Prints, objects, and small studio goods from The Piglet's Satchel projects.">
+  <title>Thanks | The Piglet's Satchel</title>
+  <meta name="description" content="Inquiry confirmation for The Piglet's Satchel.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -16,16 +16,16 @@
         <img src="assets/images/logo-v2.png" alt="">
         <span>
           <strong>The Piglet's Satchel</strong>
-          <small>An anthology studio</small>
+          <small>An art studio</small>
         </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="index.html#projects">Projects</a>
         <a href="shop.html">Shop</a>
-        <a href="index.html#custom-work">Custom Work</a>
-        <a href="index.html#notes">Blog</a>
+        <a href="index.html#custom-work">Commissions</a>
         <a href="about.html">About</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Journal</a>
         <a href="index.html#contact">Contact</a>
       </nav>
 
@@ -39,34 +39,25 @@
     <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
       <a href="index.html#projects">Projects</a>
       <a href="shop.html">Shop</a>
-      <a href="index.html#custom-work">Custom Work</a>
-      <a href="index.html#notes">Blog</a>
+      <a href="index.html#custom-work">Commissions</a>
       <a href="about.html">About</a>
+      <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Journal</a>
       <a href="index.html#contact">Contact</a>
     </nav>
 
-    <main class="shop-page">
-      <section class="shop-hero">
-        <div>
-          <p class="panel-kicker">Shop</p>
-          <h1>Prints and objects from across the satchel.</h1>
-          <p>Browse by project, then follow the product link to buy through the connected shop. This page is built to update from Printify, which is the sensible kind of boring.</p>
+    <main class="px-6 py-20 md:py-28">
+      <section class="max-w-2xl mx-auto text-center">
+        <p class="panel-kicker">Thanks</p>
+        <h1 class="font-display text-4xl md:text-5xl mb-6" style="color: var(--color-text);">Your inquiry was sent.</h1>
+        <p class="text-lg leading-relaxed mb-8" style="color: var(--color-text-muted);">The project details were forwarded to the studio inbox. If the message needs files or extra context, send a follow-up to <a href="mailto:secondedgeblades@gmail.com" class="underline" style="color: var(--color-accent);">secondedgeblades@gmail.com</a>.</p>
+        <div class="concept-actions justify-center">
+          <a href="index.html#projects" class="concept-button dark">Back to the worlds</a>
+          <a href="index.html#contact" class="concept-button light">Send another inquiry</a>
         </div>
-        <a href="https://www.etsy.com/shop/ThePigletsSatchel" class="concept-button dark" target="_blank" rel="noopener">Open Etsy Shop</a>
-      </section>
-
-      <section class="shop-catalog">
-        <div class="shop-filter-row" data-shop-filters="#shop-catalog-grid"></div>
-        <div id="shop-catalog-grid" class="shop-grid-full" data-shop-preview data-project="all" data-limit="200"></div>
-      </section>
-
-      <section class="shop-note">
-        <h2>How this stays organized</h2>
-        <p>Printify product titles, descriptions, tags, and images are synced into local site data. Routing rules assign each product to a project so the homepage, shop page, and project pages all pull from the same source.</p>
       </section>
     </main>
 
-    <footer id="contact" class="concept-footer">
+    <footer class="concept-footer">
       <div>
         <img src="assets/images/logo-v2.png" alt="">
         <p>The Piglet's Satchel<br><span>© 2026 CK Armstrong</span></p>
@@ -74,17 +65,17 @@
       <nav aria-label="Footer navigation">
         <a href="index.html#projects">Projects</a>
         <a href="shop.html">Shop</a>
-        <a href="index.html#custom-work">Custom Work</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
       <nav aria-label="Studio links">
         <a href="about.html">About</a>
-        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Blog</a>
-        <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
       </nav>
       <nav aria-label="External links">
-        <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener">Etsy</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="https://ckarmstrong.substack.com" target="_blank" rel="noopener">Substack</a>
+        <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+        <a href="mailto:secondedgeblades@gmail.com">Email</a>
       </nav>
     </footer>
   </div>
@@ -98,7 +89,5 @@
       menuToggle.setAttribute('aria-expanded', String(!isHidden));
     });
   </script>
-  <script src="assets/js/shop-products.js"></script>
-  <script src="assets/js/shop-render.js"></script>
 </body>
 </html>
