@@ -286,6 +286,55 @@ img {
   margin-top: 1.65rem;
 }
 
+.concept-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.78rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.concept-button.dark {
+  background: var(--color-accent-dark);
+  color: #fff9f0;
+  border-color: var(--color-accent-dark);
+}
+
+.concept-button.light {
+  background: rgba(250, 247, 242, 0.68);
+  color: var(--color-ink);
+  border-color: var(--color-rule);
+}
+
+.concept-button:hover,
+.concept-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(45, 42, 38, 0.12);
+}
+
+.concept-button.dark:hover,
+.concept-button.dark:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.concept-button.light:hover,
+.concept-button.light:focus-visible {
+  background: rgba(250, 247, 242, 0.92);
+  border-color: rgba(45, 42, 38, 0.24);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
