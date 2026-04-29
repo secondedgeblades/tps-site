@@ -295,13 +295,14 @@ img {
   border: 1px solid transparent;
   border-radius: 8px;
   font-family: 'Newsreader', Georgia, serif;
-  font-size: 0.98rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
+  box-shadow: 0 6px 16px rgba(45, 42, 38, 0.14);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -315,6 +316,36 @@ img {
   background: rgba(250, 247, 242, 0.68);
   color: var(--color-ink);
   border-color: var(--color-rule);
+}
+
+.signup-form button,
+.custom-form button,
+button.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--color-accent-dark);
+  border-radius: 8px;
+  background: var(--color-accent-dark);
+  color: #fff9f0;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(45, 42, 38, 0.14);
+  cursor: pointer;
+}
+
+.signup-form button:hover,
+.signup-form button:focus-visible,
+.custom-form button:hover,
+.custom-form button:focus-visible,
+button.form-submit:hover,
+button.form-submit:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .concept-button:hover,
