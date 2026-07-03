@@ -2267,6 +2267,8 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 .print-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--color-border);
   border-radius: 6px;
   overflow: hidden;
@@ -2281,20 +2283,40 @@ body:not(.home-shell) main > .mb-8:first-child img {
 }
 
 .print-card-image {
+  display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--color-paper);
-}
-
-.print-card-image.portrait-image {
-  aspect-ratio: 8.5 / 11;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  position: relative;
 }
 
 .print-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.print-card-image:hover img {
+  transform: scale(1.03);
+}
+
+.lb-zoom-hint {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.6rem;
+  font-size: 1rem;
+  color: rgba(45,42,38,0.35);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.print-card-image:hover .lb-zoom-hint {
+  color: rgba(45,42,38,0.65);
 }
 
 .print-card-body {
@@ -2303,6 +2325,11 @@ body:not(.home-shell) main > .mb-8:first-child img {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  flex: 1;
+}
+
+.print-btn {
+  margin-top: auto !important;
 }
 
 .print-card-body h3 {
@@ -2582,6 +2609,81 @@ body:not(.home-shell) main > .mb-8:first-child img {
 
 .footer-bottom-strip a:hover {
   color: var(--color-ink);
+}
+
+/* --- Lightbox --- */
+
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-overlay[hidden] {
+  display: none;
+}
+
+.lb-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.lb-content {
+  position: relative;
+  z-index: 2;
+  max-width: min(90vw, 900px);
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+}
+
+.lb-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(30,28,26,0.85);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.lb-close:hover,
+.lb-close:focus-visible {
+  background: rgba(60,56,50,0.95);
+  border-color: rgba(255,255,255,0.6);
+  transform: scale(1.08);
+}
+
+.lb-close:focus-visible {
+  outline: 2px solid #b88955;
+  outline-offset: 3px;
+}
+
+/* Make wcv2 image also show cursor zoom */
+.wcv2-image.lb-trigger {
+  cursor: zoom-in;
 }
 
 /* --- Revamp responsive --- */

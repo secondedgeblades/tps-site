@@ -18,7 +18,7 @@
 
   <link rel="icon" type="image/png" href="assets/images/logo-v2.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
 </head>
 <body class="home-shell">
 <div class="studio-window">
@@ -93,7 +93,7 @@
       <div class="worlds-grid">
         <!-- The Soft Dark -->
         <a href="projects/softdark.html" class="world-card-v2 accent-softdark">
-          <div class="wcv2-image">
+          <div class="wcv2-image lb-trigger" data-src="assets/images/softdark-cast.webp" data-alt="The Soft Dark — creature cast">
             <img src="assets/images/softdark-cast.webp" alt="The Soft Dark creature cast">
           </div>
           <div class="wcv2-body">
@@ -106,7 +106,7 @@
 
         <!-- Tales from the Middle -->
         <a href="stories.html" class="world-card-v2 accent-tales">
-          <div class="wcv2-image">
+          <div class="wcv2-image lb-trigger" data-src="assets/images/neighborly-audit.webp" data-alt="Tales from the Middle — Neighbours">
             <img src="assets/images/neighborly-audit.webp" alt="Tales from the Middle — Neighbours">
           </div>
           <div class="wcv2-body">
@@ -119,7 +119,7 @@
 
         <!-- Battle Fairies -->
         <a href="#shop" class="world-card-v2 accent-bf">
-          <div class="wcv2-image">
+          <div class="wcv2-image lb-trigger" data-src="assets/images/battle-fairies/bf-cat-lady.jpg" data-alt="Battle Fairies — Cat Lady">
             <img src="assets/images/battle-fairies/bf-cat-lady.jpg" alt="Battle Fairies — Cat Lady">
           </div>
           <div class="wcv2-body">
@@ -175,9 +175,10 @@
       <div class="print-grid">
 
         <div class="print-card">
-          <div class="print-card-image portrait-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-warrior-fairy.jpg" data-alt="Warrior Fairy — Battle Fairies print" aria-label="View Warrior Fairy full size">
             <img src="assets/images/battle-fairies/bf-warrior-fairy.jpg" alt="Warrior Fairy print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Warrior Fairy</h3>
             <p class="print-size">8.5 × 11 in</p>
@@ -187,9 +188,10 @@
         </div>
 
         <div class="print-card">
-          <div class="print-card-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-hammer-time.jpg" data-alt="Hammer Time — Battle Fairies print" aria-label="View Hammer Time full size">
             <img src="assets/images/battle-fairies/bf-hammer-time.jpg" alt="Hammer Time print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Hammer Time</h3>
             <p class="print-size">8.5 × 8.5 in</p>
@@ -199,9 +201,10 @@
         </div>
 
         <div class="print-card">
-          <div class="print-card-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-cat-lady.jpg" data-alt="Cat Lady — Battle Fairies print" aria-label="View Cat Lady full size">
             <img src="assets/images/battle-fairies/bf-cat-lady.jpg" alt="Cat Lady print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Cat Lady</h3>
             <p class="print-size">8.5 × 8.5 in</p>
@@ -211,9 +214,10 @@
         </div>
 
         <div class="print-card">
-          <div class="print-card-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-samurai.jpg" data-alt="Samurai — Battle Fairies print" aria-label="View Samurai full size">
             <img src="assets/images/battle-fairies/bf-samurai.jpg" alt="Samurai print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Samurai</h3>
             <p class="print-size">8.5 × 8.5 in</p>
@@ -223,9 +227,10 @@
         </div>
 
         <div class="print-card">
-          <div class="print-card-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-storm-rider.jpg" data-alt="Storm Rider — Battle Fairies print" aria-label="View Storm Rider full size">
             <img src="assets/images/battle-fairies/bf-storm-rider.jpg" alt="Storm Rider print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Storm Rider</h3>
             <p class="print-size">8.5 × 8.5 in</p>
@@ -235,9 +240,10 @@
         </div>
 
         <div class="print-card">
-          <div class="print-card-image">
+          <button class="print-card-image lb-trigger" data-src="assets/images/battle-fairies/bf-battle-dragon.jpg" data-alt="Battle Dragon — Battle Fairies print" aria-label="View Battle Dragon full size">
             <img src="assets/images/battle-fairies/bf-battle-dragon.jpg" alt="Battle Dragon print">
-          </div>
+            <span class="lb-zoom-hint">&#x26F6;</span>
+          </button>
           <div class="print-card-body">
             <h3>Battle Dragon</h3>
             <p class="print-size">8.5 × 8.5 in</p>
@@ -354,12 +360,58 @@
 
 </div>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button id="lb-close" class="lb-close" aria-label="Close image viewer">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="lb-backdrop" id="lb-backdrop"></div>
+  <div class="lb-content">
+    <img id="lb-img" src="" alt="">
+  </div>
+</div>
+
 <script>
+  // Mobile menu
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   menuToggle.addEventListener('click', function () {
     const isHidden = mobileMenu.classList.toggle('hidden');
     menuToggle.setAttribute('aria-expanded', String(!isHidden));
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbClose = document.getElementById('lb-close');
+  const lbBackdrop = document.getElementById('lb-backdrop');
+
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lb.hidden = true;
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  document.querySelectorAll('.lb-trigger').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      openLightbox(el.dataset.src, el.dataset.alt);
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !lb.hidden) closeLightbox();
   });
 </script>
 </body>
