@@ -51,6 +51,8 @@ export async function onRequestPost(context) {
     'return_url': 'https://thepigletssatchel.ca/thanks-order.html?session_id={CHECKOUT_SESSION_ID}',
     'shipping_options[0][shipping_rate]': SHIPPING_CA_US,
     'shipping_options[1][shipping_rate]': SHIPPING_INTL,
+    'payment_method_types[0]': 'card',
+    'payment_method_options[card][request_three_d_secure]': 'automatic',
   });
 
   ALLOWED_COUNTRIES.forEach((c, i) => {
