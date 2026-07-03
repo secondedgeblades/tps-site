@@ -4,298 +4,351 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Piglet's Satchel | Strange work, carefully made.</title>
-  <meta name="description" content="The Piglet's Satchel is a creative studio for art, fiction, music, custom work, and worlds worth wandering through.">
-  
-  <!-- SEO & Social Sharing -->
+  <meta name="description" content="The Piglet's Satchel is a one-person studio making sketch-based characters, limited prints, and worlds worth wandering through.">
+
   <meta property="og:title" content="The Piglet's Satchel | Strange work, carefully made.">
-  <meta property="og:description" content="Explore original stories, music, and art curated as a collection of worlds by CK Armstrong.">
+  <meta property="og:description" content="Sketch-based characters, limited prints, and worlds worth wandering through.">
   <meta property="og:image" content="https://thepigletssatchel.ca/assets/images/logo-v2.png">
   <meta property="og:url" content="https://thepigletssatchel.ca/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Piglet's Satchel">
-  <meta name="twitter:description" content="Strange work, carefully made. Art, fiction, music, and custom work.">
+  <meta name="twitter:description" content="Strange work, carefully made.">
   <meta name="twitter:image" content="https://thepigletssatchel.ca/assets/images/logo-v2.png">
 
   <link rel="icon" type="image/png" href="assets/images/logo-v2.png">
-  
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.0">
 </head>
 <body class="home-shell">
+<div class="studio-window">
 
-  <div class="studio-window">
-    <header class="topbar">
-      <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
-        <img src="assets/images/logo-v2.png" alt="">
-        <span>
-          <strong>The Piglet's Satchel</strong>
-          <small>An art studio</small>
-        </span>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="shop.html">Shop</a>
-        <a href="#custom-work">Commissions</a>
-        <a href="about.html">About</a>
-        <a href="#contact">Contact</a>
-        <a href="shop.html" class="cart-icon" aria-label="View cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
-        </a>
-      </nav>
-
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-      </button>
-    </header>
-
-    <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
-      <a href="#projects">Projects</a>
-      <a href="shop.html">Shop</a>
-      <a href="#custom-work">Commissions</a>
+  <!-- NAV -->
+  <header class="topbar">
+    <a href="index.html" class="studio-brand" aria-label="The Piglet's Satchel home">
+      <img src="assets/images/logo-v2.png" alt="">
+      <span>
+        <strong>The Piglet's Satchel</strong>
+        <small>An art studio</small>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#worlds">Worlds</a>
+      <a href="#shop">Shop</a>
+      <a href="#commissions">Commissions</a>
       <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#footer-contact">Contact</a>
     </nav>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
 
-    <main>
-      <section class="concept-hero">
-        <div class="hero-text">
-          <h1>A rummage through<br>the satchel.</h1>
-          <div class="short-rule"></div>
-          <p>The Piglet's Satchel is one creative studio containing many different worlds. Step inside and explore stories, images, sounds, and ideas from the satchel.</p>
-          <div class="concept-actions">
-            <a href="#projects" class="concept-button dark">Explore the Worlds &rarr;</a>
-            <a href="#projects" class="concept-button light">View Selected Works</a>
-          </div>
+  <nav id="mobile-menu" class="mobile-nav hidden" aria-label="Mobile navigation">
+    <a href="#worlds">Worlds</a>
+    <a href="#shop">Shop</a>
+    <a href="#commissions">Commissions</a>
+    <a href="about.html">About</a>
+    <a href="#footer-contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="revamp-hero">
+      <div class="revamp-hero-copy">
+        <h1>Strange work,<br>carefully made.</h1>
+        <div class="short-rule"></div>
+        <p>The Piglet's Satchel is a one-person studio making sketch-based characters, limited art prints, and worlds worth wandering through.</p>
+        <div class="revamp-hero-actions">
+          <a href="#worlds" class="concept-button dark">Browse the Work &rarr;</a>
+          <a href="#shop" class="concept-button light">Shop Prints</a>
         </div>
-
-        <div class="hero-collage">
-          <img class="satchel-hero-art" src="assets/images/logo-v2.png" alt="The Piglet sitting next to his satchel">
+      </div>
+      <div class="revamp-hero-art">
+        <div class="hero-art-frame">
+          <img src="assets/images/battle-fairies/bf-warrior-fairy.jpg" alt="Warrior Fairy — Battle Fairies print by CK Armstrong">
+          <div class="hero-art-label">Battle Fairies · New Series</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="projects" class="featured-worlds">
-        <div class="section-line-head">
-          <h2>Featured Worlds</h2>
-          <a href="#projects">View all projects &rarr;</a>
-        </div>
+    <!-- WORLDS -->
+    <section id="worlds" class="revamp-worlds">
+      <div class="revamp-section-head">
+        <p class="panel-kicker">Worlds</p>
+      </div>
 
-        <div class="world-strip">
-          <a href="projects/softdark.html" class="world-card">
+      <div class="worlds-grid">
+        <!-- The Soft Dark -->
+        <a href="projects/softdark.html" class="world-card-v2 accent-softdark">
+          <div class="wcv2-image">
             <img src="assets/images/softdark-cast.webp" alt="The Soft Dark creature cast">
-            <div class="world-card-copy">
-              <p>Read · Look</p>
-              <h3>The Soft Dark</h3>
-              <span aria-hidden="true">&rarr;</span>
-            </div>
-          </a>
+          </div>
+          <div class="wcv2-body">
+            <p class="wcv2-medium">Read · Look</p>
+            <h3>The Soft Dark</h3>
+            <p class="wcv2-desc">Creature portraits from somewhere between the known and the not.</p>
+            <span class="wcv2-arrow">&rarr;</span>
+          </div>
+        </a>
 
-          <a href="projects/tales.html" class="world-card">
-            <img src="assets/images/neighborly-audit.webp" alt="Tales from the Middle artwork">
-            <div class="world-card-copy">
-              <p>Read · Look</p>
-              <h3>Tales from the Middle</h3>
-              <span aria-hidden="true">&rarr;</span>
-            </div>
-          </a>
+        <!-- Tales from the Middle -->
+        <a href="stories.html" class="world-card-v2 accent-tales">
+          <div class="wcv2-image">
+            <img src="assets/images/neighborly-audit.webp" alt="Tales from the Middle — Neighbours">
+          </div>
+          <div class="wcv2-body">
+            <p class="wcv2-medium">Read · Look</p>
+            <h3>Tales from the Middle</h3>
+            <p class="wcv2-desc">Things that matter, things that bother me, things I just wanted to make.</p>
+            <span class="wcv2-arrow">&rarr;</span>
+          </div>
+        </a>
 
-          <a href="projects/ruby.html" class="world-card">
-            <img src="assets/images/ruby/front-cover.png" alt="Ruby and the Guardian illustration">
-            <div class="world-card-copy">
-              <p>Read · Look</p>
-              <h3>Ruby &amp; The Guardian</h3>
-              <span aria-hidden="true">&rarr;</span>
-            </div>
-          </a>
+        <!-- Battle Fairies -->
+        <a href="#shop" class="world-card-v2 accent-bf">
+          <div class="wcv2-image">
+            <img src="assets/images/battle-fairies/bf-cat-lady.jpg" alt="Battle Fairies — Cat Lady">
+          </div>
+          <div class="wcv2-body">
+            <p class="wcv2-medium">Look · Buy</p>
+            <h3>Battle Fairies</h3>
+            <p class="wcv2-desc">Sketched fairies with large weapons. Limited run prints on shimmer paper.</p>
+            <span class="wcv2-arrow">&rarr;</span>
+          </div>
+        </a>
+      </div>
 
-          <a href="projects/hoptwice.html" class="world-card">
-            <img src="assets/images/hoptwice-bunny.webp" alt="Hop Twice artwork">
-            <div class="world-card-copy">
-              <p>Listen</p>
-              <h3>Hop Twice</h3>
-              <span aria-hidden="true">&rarr;</span>
-            </div>
-          </a>
+      <!-- Archive -->
+      <div class="archive-divider">
+        <span>Archive</span>
+      </div>
 
-          <a href="stories.html" class="world-card story-card">
-            <div class="story-preview">
-              <p>The bellows filled first. A long, mechanical inhale drawn through leather lungs older than anyone still alive in the parish.</p>
-            </div>
-            <div class="world-card-copy">
-              <p>Read</p>
-              <h3>Short Stories</h3>
-              <span aria-hidden="true">&rarr;</span>
-            </div>
-          </a>
+      <div class="archive-row">
+        <div class="archive-card">
+          <div class="archive-card-image">
+            <img src="assets/images/ruby-cover.jpg" alt="Ruby &amp; the Guardian">
+          </div>
+          <div class="archive-card-body">
+            <span class="archive-badge sold-out">Sold Out</span>
+            <h4>Ruby &amp; the Guardian</h4>
+          </div>
         </div>
-      </section>
 
-      <section class="lower-panels">
-        <article id="shop" class="panel shop-panel">
-          <div class="panel-head">
-            <p class="panel-kicker">Shop</p>
-            <a href="shop.html">View shop &rarr;</a>
+        <div class="archive-card">
+          <div class="archive-card-image">
+            <img src="assets/images/seb-hero.jpg" alt="Second Edge Blades">
           </div>
-          <div class="shop-preview-grid">
-            <a href="https://www.blurb.ca/b/12813042-ruby-and-the-garden-guardian" class="shop-item" target="_blank" rel="noopener">
-              <img src="assets/images/ruby/front-cover.png" alt="Ruby and the Garden Guardian Hardcover">
-              <span>Ruby Hardcover</span>
-              <small>Blurb</small>
-            </a>
-            <a href="https://the-piglets-satchel.printify.me/product/27825626" class="shop-item" target="_blank" rel="noopener">
-              <img src="https://images-api.printify.com/mockup/69d422bfb2a96bcd87029b4d/45747/16654/hop-twice-bunny-sticker-hand-drawn-lop-ear-rabbit-die-cut-vinyl-laptop-water-bottle-decal.jpg?camera_label=front" alt="Hop Twice Bunny Sticker">
-              <span>Bunny Sticker</span>
-              <small>$4.58+</small>
-            </a>
-            <a href="https://the-piglets-satchel.printify.me/product/27825511" class="shop-item" target="_blank" rel="noopener">
-              <img src="https://images-api.printify.com/mockup/69d422eab2a96bcd87029b5f/32912/98425/second-edge-blades-hoodie-skate-graphic-pullover.jpg?camera_label=back" alt="Second Edge Blades Hoodie">
-              <span>SEB Hoodie</span>
-              <small>$57.13+</small>
-            </a>
-            <a href="https://the-piglets-satchel.printify.me/product/27869304/neighbors-canvas-matte-stretched-wall-art" class="shop-item" target="_blank" rel="noopener">
-              <img src="https://images-api.printify.com/mockup/69eb742882b583dc340e8342/82218/53156/neighbors-canvas-matte-stretched-wall-art.jpg?camera_label=front" alt="Neighbors Canvas">
-              <span>Neighbors Canvas</span>
-              <small>$99.36+</small>
-            </a>
+          <div class="archive-card-body">
+            <span class="archive-badge on-hold">On Hold</span>
+            <h4>Second Edge Blades</h4>
           </div>
-        </article>
-
-        <article id="custom-work" class="panel custom-panel">
-          <p class="panel-kicker">Commissions & Custom Work</p>
-          <h2>Need something made?</h2>
-          <p>I take on thoughtful projects and collaborations across a range of mediums and styles. Let's build something meaningful together.</p>
-          <div class="service-icons-grid">
-            <div class="service-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l5 5M5.5 16.5l3.5 3.5"/></svg>
-              <span>Illustration</span>
-            </div>
-            <div class="service-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              <span>Concept Work</span>
-            </div>
-            <div class="service-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a2 2 0 0 1 2-2h10l4 4v11m-4-11h4"/></svg>
-              <span>Cover Art</span>
-            </div>
-            <div class="service-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <span>Custom Pieces</span>
-            </div>
-          </div>
-          <a href="#contact" class="inline-link" style="margin-top: 1rem; display: inline-block;">Start a custom project &rarr;</a>
-        </article>
-
-        <article id="notes" class="panel notes-panel-concept">
-          <p class="panel-kicker">Stay in the Loop</p>
-          <h2>Journal & studio notes</h2>
-          <p>Quiet updates on new worlds, works in progress, stories, and the occasional behind-the-scenes glimpse.</p>
-          <form
-            class="signup-form"
-            action="https://formsubmit.co/secondedgeblades@gmail.com"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="TPS newsletter signup">
-            <input type="hidden" name="_next" value="https://thepigletssatchel.ca/thanks-newsletter.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
-            <input type="email" name="email" placeholder="your email address" required>
-            <button type="submit" class="concept-button dark">Join the List</button>
-          </form>
-          <p class="form-fineprint">Sent to the studio inbox for manual list handling. No spam. Unsubscribe anytime.</p>
-        </article>
-      </section>
-      <section id="contact" class="contact-section">
-        <div class="contact-container">
-          <p class="panel-kicker">Get in Touch</p>
-          <h2>Start a Custom Project</h2>
-          <p>Have an idea for an illustration, a story asset, or a custom object? Fill out the form below and I'll get back to you to talk through the details.</p>
-          
-          <form
-            class="custom-form"
-            action="https://formsubmit.co/secondedgeblades@gmail.com"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="TPS custom project inquiry">
-            <input type="hidden" name="_next" value="https://thepigletssatchel.ca/thanks-inquiry.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
-            <div class="form-group">
-              <label class="form-label" for="name">Name</label>
-              <input class="form-input" type="text" id="name" name="name" required placeholder="your name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input class="form-input" type="email" id="email" name="email" required placeholder="your email address">
-            </div>
-            <div class="form-group full-width">
-              <label class="form-label" for="project-type">Project Type</label>
-              <select class="form-select" id="project-type" name="project-type">
-                <option value="illustration">Illustration</option>
-                <option value="concept">Concept Work</option>
-                <option value="cover-art">Cover Art</option>
-                <option value="custom">Custom Piece</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group full-width">
-              <label class="form-label" for="message">Message</label>
-              <textarea class="form-textarea" id="message" name="message" required placeholder="tell me about your project..."></textarea>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="concept-button dark form-submit">Send Inquiry &rarr;</button>
-            </div>
-          </form>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="concept-footer">
-      <div class="footer-brand">
-        <img src="assets/images/logo-v2.png" alt="The Piglet Logo">
+    <!-- SHOP -->
+    <section id="shop" class="revamp-shop">
+      <div class="revamp-section-head shop-head">
         <div>
-          <p>The Piglet's Satchel</p>
-          <p>&copy; 2024 All rights reserved.</p>
+          <p class="panel-kicker">Shop</p>
+          <h2 class="revamp-section-title">Battle Fairies Prints</h2>
+          <p class="shop-subhead">Limited run · Shimmer paper · 5 of each available</p>
         </div>
       </div>
-      <nav aria-label="Footer navigation">
-        <p class="nav-title">Projects</p>
-        <a href="#projects">Shop</a>
-        <a href="#custom-work">Commissions</a>
-      </nav>
-      <nav aria-label="Studio links">
-        <p class="nav-title">About</p>
-        <a href="#contact">Contact</a>
-      </nav>
-      <nav aria-label="Legal links">
-        <p class="nav-title">Shipping & Returns</p>
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </nav>
-      <div class="footer-socials">
-        <p class="nav-title">Find me in other places</p>
-        <div class="social-icons">
-          <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener" aria-label="Tumblr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v4c0 2.2-1.8 4-4 4h0v3h3v4.5A2.5 2.5 0 0 0 10.5 21H16v-3h-3a1 1 0 0 1-1-1V14h4v-3h-4V3H9z"/></svg></a>
-          <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3V9z"/></svg></a>
-          <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" aria-label="Etsy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h12M8 4v16M8 12h9M8 20h12"/></svg></a>
-          <a href="mailto:secondedgeblades@gmail.com?subject=The%20Piglet%27s%20Satchel%20Inquiry" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+
+      <div class="print-grid">
+
+        <div class="print-card">
+          <div class="print-card-image portrait-image">
+            <img src="assets/images/battle-fairies/bf-warrior-fairy.jpg" alt="Warrior Fairy print">
+          </div>
+          <div class="print-card-body">
+            <h3>Warrior Fairy</h3>
+            <p class="print-size">8.5 × 11 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+        <div class="print-card">
+          <div class="print-card-image">
+            <img src="assets/images/battle-fairies/bf-hammer-time.jpg" alt="Hammer Time print">
+          </div>
+          <div class="print-card-body">
+            <h3>Hammer Time</h3>
+            <p class="print-size">8.5 × 8.5 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+        <div class="print-card">
+          <div class="print-card-image">
+            <img src="assets/images/battle-fairies/bf-cat-lady.jpg" alt="Cat Lady print">
+          </div>
+          <div class="print-card-body">
+            <h3>Cat Lady</h3>
+            <p class="print-size">8.5 × 8.5 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+        <div class="print-card">
+          <div class="print-card-image">
+            <img src="assets/images/battle-fairies/bf-samurai.jpg" alt="Samurai print">
+          </div>
+          <div class="print-card-body">
+            <h3>Samurai</h3>
+            <p class="print-size">8.5 × 8.5 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+        <div class="print-card">
+          <div class="print-card-image">
+            <img src="assets/images/battle-fairies/bf-storm-rider.jpg" alt="Storm Rider print">
+          </div>
+          <div class="print-card-body">
+            <h3>Storm Rider</h3>
+            <p class="print-size">8.5 × 8.5 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+        <div class="print-card">
+          <div class="print-card-image">
+            <img src="assets/images/battle-fairies/bf-battle-dragon.jpg" alt="Battle Dragon print">
+          </div>
+          <div class="print-card-body">
+            <h3>Battle Dragon</h3>
+            <p class="print-size">8.5 × 8.5 in</p>
+            <p class="print-price">$35 <span class="print-currency">CAD</span></p>
+            <button class="concept-button dark print-btn">Buy Print</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bundle -->
+      <div class="bundle-card">
+        <div class="bundle-card-copy">
+          <p class="panel-kicker">Full Collection</p>
+          <h3>The Complete Set — All 6 Prints</h3>
+          <p>One of every fairy. Collect the whole squad.</p>
+        </div>
+        <div class="bundle-card-action">
+          <p class="bundle-price">$185 <span class="print-currency">CAD</span> <span class="bundle-savings">Save $25</span></p>
+          <button class="concept-button dark">Buy the Set</button>
         </div>
       </div>
-    </footer>
-  </div>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+      <!-- Shipping note -->
+      <p class="shipping-note">
+        Shipping: $12 CAD within Canada &amp; USA &middot; $32 CAD international &middot; Free on orders over $150 CAD
+      </p>
+    </section>
 
-    menuToggle.addEventListener('click', function() {
-      const isHidden = mobileMenu.classList.toggle('hidden');
-      menuToggle.setAttribute('aria-expanded', String(!isHidden));
-    });
-  </script>
-  <script src="assets/js/shop-products.js"></script>
-  <script src="assets/js/shop-render.js"></script>
+    <!-- COMMISSIONS -->
+    <section id="commissions" class="revamp-commissions">
+      <div class="commissions-inner">
+        <p class="panel-kicker">Commissions</p>
+        <h2>Custom Work</h2>
+        <p>Illustration, concept work, cover art, and custom pieces. The commissions list is currently closed — sign up below to be notified when it reopens.</p>
+        <form
+          class="commissions-signup"
+          action="https://formsubmit.co/secondedgeblades@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="TPS commissions notification signup">
+          <input type="hidden" name="_next" value="https://thepigletssatchel.ca/thanks-newsletter.html">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+          <input type="email" name="email" placeholder="your email address" required>
+          <button type="submit" class="concept-button dark">Notify Me</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer-contact" class="revamp-footer">
+    <div class="revamp-footer-inner">
+
+      <div class="footer-brand-block">
+        <img src="assets/images/logo-v2.png" alt="The Piglet's Satchel logo">
+        <div>
+          <p class="footer-studio-name">The Piglet's Satchel</p>
+          <p class="footer-studio-sub">An art studio</p>
+        </div>
+      </div>
+
+      <nav class="footer-anchor-nav" aria-label="Footer navigation">
+        <a href="#worlds">Worlds</a>
+        <a href="#shop">Shop</a>
+        <a href="#commissions">Commissions</a>
+        <a href="about.html">About</a>
+        <a href="mailto:secondedgeblades@gmail.com?subject=The%20Piglet%27s%20Satchel">Contact</a>
+      </nav>
+
+      <div class="footer-socials-block">
+        <p class="footer-socials-label">Find the studio</p>
+        <div class="footer-socials-icons">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/secondedgeblades/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@HopTwice" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3V9z"/></svg>
+          </a>
+          <!-- Tumblr -->
+          <a href="https://thepigletssatchel.tumblr.com" target="_blank" rel="noopener" aria-label="Tumblr">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v4c0 2.2-1.8 4-4 4h0v3h3v4.5A2.5 2.5 0 0 0 10.5 21H16v-3h-3a1 1 0 0 1-1-1V14h4v-3h-4V3H9z"/></svg>
+          </a>
+          <!-- Etsy -->
+          <a href="https://www.etsy.com/shop/ThePigletsSatchel" target="_blank" rel="noopener" aria-label="Etsy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h12M8 4v16M8 12h9M8 20h12"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:secondedgeblades@gmail.com?subject=The%20Piglet%27s%20Satchel%20Inquiry" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-strip">
+      <span>&copy; 2026 The Piglet's Satchel. All rights reserved.</span>
+      <span>
+        <a href="terms.html">Terms</a>
+        &middot;
+        <a href="privacy.html">Privacy</a>
+      </span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', function () {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isHidden));
+  });
+</script>
 </body>
 </html>
