@@ -1,3 +1,5 @@
+const STOCK_LIMIT = 5;
+
 const PRICE_MAP = {
   'price_1TpFHV1Ks67NRN3TWV9WqIJd': 4000,  // Warrior Fairy  $40
   'price_1TpFHV1Ks67NRN3THaeAQ7NH': 3500,  // Hammer Time    $35
@@ -18,6 +20,29 @@ const INTL_COUNTRIES = [
 ];
 
 const ALLOWED_COUNTRIES = [...CA_US_COUNTRIES, ...INTL_COUNTRIES];
+
+async function getSoldQty(secretKey) {
+  const soldQty = {};
+  let url = 'https://api.stripe.com/v1/checkout/sessions?status=complete&limit=100&expand[]=data.line_items';
+
+  while (url) {
+    const res = await fetch(url, {
+      headers: { 'Authorization': `Bearer ${secretKey}` },
+    });
+    const data = await res.json();
+    for (const session of (data.data || [])) {
+      for (const item of (session.line_items?.data || [])) {
+        const pid = item.price?.id;
+        if (pid && PRICE_MAP[pid]) {
+          soldQty[pid] = (soldQty[pid] || 0) + item.quantity;
+        }
+      }
+    }
+    url = data.has_more ? `https://api.stripe.com/v1/checkout/sessions?status=complete&limit=100&expand[]=data.line_items&starting_after=${data.data[data.data.length - 1].id}` : null;
+  }
+
+  return soldQty;
+}
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -59,6 +84,23 @@ export async function onRequestPost(context) {
     if (!Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 5) {
       return new Response(JSON.stringify({ error: 'Invalid quantity' }), {
         status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+  }
+
+  // Stock check
+  const soldQty = await getSoldQty(env.STRIPE_SECRET_KEY);
+  for (const item of items) {
+    const sold = soldQty[item.priceId] || 0;
+    const available = STOCK_LIMIT - sold;
+    if (available <= 0) {
+      return new Response(JSON.stringify({ error: 'sold_out', priceId: item.priceId }), {
+        status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    if (item.quantity > available) {
+      return new Response(JSON.stringify({ error: 'insufficient_stock', priceId: item.priceId, available }), {
+        status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
   }

@@ -191,6 +191,8 @@ async function checkoutCart() {
       body: JSON.stringify({ items }),
     });
     const data = await res.json();
+    if (data.error === 'sold_out') throw new Error('Sorry — that print is sold out.');
+    if (data.error === 'insufficient_stock') throw new Error('Sorry — only ' + data.available + ' of that print left in stock.');
     if (data.error) throw new Error(data.error);
 
     closeCart();
