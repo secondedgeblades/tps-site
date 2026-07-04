@@ -1,14 +1,14 @@
-const ALLOWED_PRICES = new Set([
-  'price_1TpFHV1Ks67NRN3TWV9WqIJd', // Warrior Fairy    $40
-  'price_1TpFHV1Ks67NRN3THaeAQ7NH', // Hammer Time      $35
-  'price_1TpFHW1Ks67NRN3TGMNU4ASl', // Cat Lady         $35
-  'price_1TpFHW1Ks67NRN3TcQzwTi2n', // Samurai          $35
-  'price_1TpFHX1Ks67NRN3TArG5kZ9E', // Storm Rider      $35
-  'price_1TpFHY1Ks67NRN3TdeTX1tyJ', // Battle Dragon    $35
-  'price_1TpFHY1Ks67NRN3TW1BDyvEd', // Complete Set    $185
-]);
+const PRICE_MAP = {
+  'price_1TpFHV1Ks67NRN3TWV9WqIJd': 4000,  // Warrior Fairy  $40
+  'price_1TpFHV1Ks67NRN3THaeAQ7NH': 3500,  // Hammer Time    $35
+  'price_1TpFHW1Ks67NRN3TGMNU4ASl': 3500,  // Cat Lady       $35
+  'price_1TpFHW1Ks67NRN3TcQzwTi2n': 3500,  // Samurai        $35
+  'price_1TpFHX1Ks67NRN3TArG5kZ9E': 3500,  // Storm Rider    $35
+  'price_1TpFHY1Ks67NRN3TdeTX1tyJ': 3500,  // Battle Dragon  $35
+  'price_1TpFHY1Ks67NRN3TW1BDyvEd': 18500, // Complete Set  $185
+};
 
-const BUNDLE_PRICE = 'price_1TpFHY1Ks67NRN3TW1BDyvEd';
+const FREE_SHIPPING_THRESHOLD = 15000; // $150 CAD in cents
 
 const CA_US_COUNTRIES = ['CA','US'];
 
@@ -29,36 +29,60 @@ export async function onRequestPost(context) {
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 
-  let priceId;
-  try {
-    ({ priceId } = await request.json());
-  } catch {
+  let body;
+  try { body = await request.json(); }
+  catch {
     return new Response(JSON.stringify({ error: 'Invalid request body' }), {
-      status: 400,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
 
-  if (!ALLOWED_PRICES.has(priceId)) {
-    return new Response(JSON.stringify({ error: 'Invalid price ID' }), {
-      status: 400,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+  // Normalise to items array
+  let items;
+  if (body.items) {
+    items = body.items;
+  } else if (body.priceId) {
+    items = [{ priceId: body.priceId, quantity: 1 }];
+  } else {
+    return new Response(JSON.stringify({ error: 'Missing priceId or items' }), {
+      status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
+
+  // Validate
+  for (const item of items) {
+    if (!PRICE_MAP[item.priceId]) {
+      return new Response(JSON.stringify({ error: 'Invalid price ID: ' + item.priceId }), {
+        status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    if (!Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 5) {
+      return new Response(JSON.stringify({ error: 'Invalid quantity' }), {
+        status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+  }
+
+  // Calculate total to determine shipping
+  const totalCents = items.reduce((sum, item) => sum + PRICE_MAP[item.priceId] * item.quantity, 0);
+  const freeShipping = totalCents >= FREE_SHIPPING_THRESHOLD;
 
   const params = new URLSearchParams({
     'ui_mode': 'embedded',
     'mode': 'payment',
-    'line_items[0][price]': priceId,
-    'line_items[0][quantity]': '1',
     'return_url': 'https://thepigletssatchel.ca/thanks-order.html?session_id={CHECKOUT_SESSION_ID}',
     'payment_method_types[0]': 'card',
     'payment_method_options[card][request_three_d_secure]': 'automatic',
   });
 
-  const isBundle = priceId === BUNDLE_PRICE;
+  // Line items
+  items.forEach((item, i) => {
+    params.set(`line_items[${i}][price]`, item.priceId);
+    params.set(`line_items[${i}][quantity]`, String(item.quantity));
+  });
 
-  if (isBundle) {
+  // Shipping
+  if (freeShipping) {
     params.set('shipping_options[0][shipping_rate_data][display_name]', 'Free Shipping');
     params.set('shipping_options[0][shipping_rate_data][type]', 'fixed_amount');
     params.set('shipping_options[0][shipping_rate_data][fixed_amount][amount]', '0');
@@ -72,11 +96,9 @@ export async function onRequestPost(context) {
     params.set('shipping_options[1][shipping_rate_data][type]', 'fixed_amount');
     params.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '3200');
     params.set('shipping_options[1][shipping_rate_data][fixed_amount][currency]', 'cad');
-
     CA_US_COUNTRIES.forEach((c, i) => {
       params.set(`shipping_options[0][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
     });
-
     INTL_COUNTRIES.forEach((c, i) => {
       params.set(`shipping_options[1][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
     });
@@ -99,14 +121,12 @@ export async function onRequestPost(context) {
 
   if (!stripeRes.ok) {
     return new Response(JSON.stringify({ error: session.error?.message || 'Stripe error' }), {
-      status: 502,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
 
   return new Response(JSON.stringify({ clientSecret: session.client_secret }), {
-    status: 200,
-    headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
   });
 }
 

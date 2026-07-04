@@ -18,7 +18,7 @@
 
   <link rel="icon" type="image/png" href="assets/images/logo-v2.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css?v=2.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="home-shell">
@@ -40,6 +40,10 @@
       <a href="about.html">About</a>
       <a href="#footer-contact">Contact</a>
     </nav>
+    <button id="cart-toggle" class="cart-toggle" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+      <span id="cart-badge" class="cart-badge" hidden>0</span>
+    </button>
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
         <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.6" stroke-linecap="round"/>
@@ -184,7 +188,16 @@
             <h3>Warrior Fairy</h3>
             <p class="print-size">8.5 × 11 in</p>
             <p class="print-price">$40 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHV1Ks67NRN3TWV9WqIJd">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHV1Ks67NRN3TWV9WqIJd"
+                data-name="Warrior Fairy"
+                data-size="8.5 × 11 in"
+                data-price="40"
+                data-img="assets/images/battle-fairies/bf-warrior-fairy.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHV1Ks67NRN3TWV9WqIJd">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -197,7 +210,16 @@
             <h3>Hammer Time</h3>
             <p class="print-size">8.5 × 8.5 in</p>
             <p class="print-price">$35 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHV1Ks67NRN3THaeAQ7NH">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHV1Ks67NRN3THaeAQ7NH"
+                data-name="Hammer Time"
+                data-size="8.5 × 8.5 in"
+                data-price="35"
+                data-img="assets/images/battle-fairies/bf-hammer-time.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHV1Ks67NRN3THaeAQ7NH">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -210,7 +232,16 @@
             <h3>Cat Lady</h3>
             <p class="print-size">8.5 × 8.5 in</p>
             <p class="print-price">$35 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHW1Ks67NRN3TGMNU4ASl">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHW1Ks67NRN3TGMNU4ASl"
+                data-name="Cat Lady"
+                data-size="8.5 × 8.5 in"
+                data-price="35"
+                data-img="assets/images/battle-fairies/bf-cat-lady.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHW1Ks67NRN3TGMNU4ASl">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -223,7 +254,16 @@
             <h3>Samurai</h3>
             <p class="print-size">8.5 × 8.5 in</p>
             <p class="print-price">$35 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHW1Ks67NRN3TcQzwTi2n">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHW1Ks67NRN3TcQzwTi2n"
+                data-name="Samurai"
+                data-size="8.5 × 8.5 in"
+                data-price="35"
+                data-img="assets/images/battle-fairies/bf-samurai.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHW1Ks67NRN3TcQzwTi2n">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -236,7 +276,16 @@
             <h3>Storm Rider</h3>
             <p class="print-size">8.5 × 8.5 in</p>
             <p class="print-price">$35 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHX1Ks67NRN3TArG5kZ9E">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHX1Ks67NRN3TArG5kZ9E"
+                data-name="Storm Rider"
+                data-size="8.5 × 8.5 in"
+                data-price="35"
+                data-img="assets/images/battle-fairies/bf-storm-rider.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHX1Ks67NRN3TArG5kZ9E">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -249,7 +298,16 @@
             <h3>Battle Dragon</h3>
             <p class="print-size">8.5 × 8.5 in</p>
             <p class="print-price">$35 <span class="print-currency">CAD</span></p>
-            <button class="concept-button dark print-btn buy-btn" data-price="price_1TpFHY1Ks67NRN3TdeTX1tyJ">Buy Print</button>
+            <p class="print-shipping-info">$12 CA/US &middot; $32 Intl &middot; Free over $150</p>
+            <div class="print-card-actions">
+              <button class="concept-button dark add-to-cart-btn"
+                data-price-id="price_1TpFHY1Ks67NRN3TdeTX1tyJ"
+                data-name="Battle Dragon"
+                data-size="8.5 × 8.5 in"
+                data-price="35"
+                data-img="assets/images/battle-fairies/bf-battle-dragon.jpg">Add to Cart</button>
+              <button class="concept-button light buy-btn" data-price="price_1TpFHY1Ks67NRN3TdeTX1tyJ">Buy Now</button>
+            </div>
           </div>
         </div>
 
@@ -361,6 +419,43 @@
 
 </div>
 
+<!-- CART BACKDROP -->
+<div id="cart-backdrop" class="cart-backdrop" hidden></div>
+
+<!-- CART DRAWER -->
+<div id="cart-drawer" class="cart-drawer" role="dialog" aria-label="Shopping cart" aria-modal="true">
+  <div class="cart-drawer-header">
+    <h2 class="cart-drawer-title">Your Cart</h2>
+    <button id="cart-close" class="cart-close-btn lb-close" aria-label="Close cart">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div id="cart-empty" class="cart-empty">
+    <p>Your cart is empty.</p>
+    <a href="#shop" id="cart-browse-link" class="inline-link" onclick="closeCart()">Browse prints &rarr;</a>
+  </div>
+
+  <div id="cart-item-list" class="cart-item-list"></div>
+
+  <div id="cart-footer" class="cart-footer" hidden>
+    <div class="shipping-progress-wrap">
+      <div class="shipping-progress-track">
+        <div id="shipping-progress-bar" class="shipping-progress-bar" style="width:0%"></div>
+      </div>
+      <p id="shipping-progress-label" class="shipping-progress-label">Add $150 more for free shipping</p>
+    </div>
+
+    <div class="cart-subtotal-row">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">$0 CAD</span>
+    </div>
+    <p class="cart-shipping-note">Shipping calculated at checkout based on your address</p>
+
+    <button id="cart-checkout-btn" class="concept-button dark cart-checkout-btn">Checkout</button>
+  </div>
+</div>
+
 <!-- CHECKOUT MODAL -->
 <div id="checkout-modal" class="co-overlay" hidden>
   <div class="co-backdrop" id="co-backdrop"></div>
@@ -398,6 +493,7 @@
 
   // Embedded checkout
   const STRIPE_PK = 'pk_live_51Syk8A1Ks67NRN3TO6gdeUt2fTG1bnMpJZxhfw8SgB3HBhNrcmnIsddCngJO8Eo366BW2sFuYceh7tJ8y6QlKDrR00jZNMU6su';
+  window.STRIPE_PK = STRIPE_PK;
   const stripe = Stripe(STRIPE_PK);
   let checkoutInstance = null;
 
@@ -502,5 +598,7 @@
     if (e.key === 'Escape' && !lb.hidden) closeLightbox();
   });
 </script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/shop.js"></script>
 </body>
 </html>
