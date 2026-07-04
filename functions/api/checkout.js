@@ -8,6 +8,8 @@ const ALLOWED_PRICES = new Set([
   'price_1TpFHY1Ks67NRN3TW1BDyvEd', // Complete Set    $185
 ]);
 
+const BUNDLE_PRICE = 'price_1TpFHY1Ks67NRN3TW1BDyvEd';
+
 const CA_US_COUNTRIES = ['CA','US'];
 
 const INTL_COUNTRIES = [
@@ -50,25 +52,35 @@ export async function onRequestPost(context) {
     'line_items[0][price]': priceId,
     'line_items[0][quantity]': '1',
     'return_url': 'https://thepigletssatchel.ca/thanks-order.html?session_id={CHECKOUT_SESSION_ID}',
-    'shipping_options[0][shipping_rate_data][display_name]': 'Canada & USA',
-    'shipping_options[0][shipping_rate_data][type]': 'fixed_amount',
-    'shipping_options[0][shipping_rate_data][fixed_amount][amount]': '1200',
-    'shipping_options[0][shipping_rate_data][fixed_amount][currency]': 'cad',
-    'shipping_options[1][shipping_rate_data][display_name]': 'International',
-    'shipping_options[1][shipping_rate_data][type]': 'fixed_amount',
-    'shipping_options[1][shipping_rate_data][fixed_amount][amount]': '3200',
-    'shipping_options[1][shipping_rate_data][fixed_amount][currency]': 'cad',
     'payment_method_types[0]': 'card',
     'payment_method_options[card][request_three_d_secure]': 'automatic',
   });
 
-  CA_US_COUNTRIES.forEach((c, i) => {
-    params.set(`shipping_options[0][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
-  });
+  const isBundle = priceId === BUNDLE_PRICE;
 
-  INTL_COUNTRIES.forEach((c, i) => {
-    params.set(`shipping_options[1][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
-  });
+  if (isBundle) {
+    params.set('shipping_options[0][shipping_rate_data][display_name]', 'Free Shipping');
+    params.set('shipping_options[0][shipping_rate_data][type]', 'fixed_amount');
+    params.set('shipping_options[0][shipping_rate_data][fixed_amount][amount]', '0');
+    params.set('shipping_options[0][shipping_rate_data][fixed_amount][currency]', 'cad');
+  } else {
+    params.set('shipping_options[0][shipping_rate_data][display_name]', 'Canada & USA');
+    params.set('shipping_options[0][shipping_rate_data][type]', 'fixed_amount');
+    params.set('shipping_options[0][shipping_rate_data][fixed_amount][amount]', '1200');
+    params.set('shipping_options[0][shipping_rate_data][fixed_amount][currency]', 'cad');
+    params.set('shipping_options[1][shipping_rate_data][display_name]', 'International');
+    params.set('shipping_options[1][shipping_rate_data][type]', 'fixed_amount');
+    params.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '3200');
+    params.set('shipping_options[1][shipping_rate_data][fixed_amount][currency]', 'cad');
+
+    CA_US_COUNTRIES.forEach((c, i) => {
+      params.set(`shipping_options[0][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
+    });
+
+    INTL_COUNTRIES.forEach((c, i) => {
+      params.set(`shipping_options[1][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
+    });
+  }
 
   ALLOWED_COUNTRIES.forEach((c, i) => {
     params.set(`shipping_address_collection[allowed_countries][${i}]`, c);
