@@ -1932,9 +1932,6 @@ body:not(.home-shell) main > .mb-8:first-child img {
 
 .revamp-hero-copy {
   max-width: 560px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .hero-release-kicker {
@@ -1983,6 +1980,14 @@ body:not(.home-shell) main > .mb-8:first-child img {
   gap: 0.9rem;
   margin-top: 1.6rem;
   margin-bottom: 0.4rem;
+  justify-content: center;
+}
+
+.revamp-hero-actions .concept-button {
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+  justify-content: center;
 }
 
 .revamp-hero-art {
@@ -3080,7 +3085,7 @@ body:not(.home-shell) main > .mb-8:first-child img {
 
   .revamp-hero-copy {
     max-width: 100%;
-    align-items: center;
+    text-align: center;
   }
 
   .revamp-hero-copy p {
