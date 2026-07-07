@@ -1,4 +1,4 @@
-const FREE_SHIPPING_THRESHOLD = 150;
+const FREE_SHIPPING_THRESHOLD = 90;
 
 function updateBadge() {
   const badge = document.getElementById('cart-badge');

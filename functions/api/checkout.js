@@ -10,7 +10,7 @@ const PRICE_MAP = {
   'price_1TqiMD1Ks67NRN3To7BuQ8J8': 10000, // Complete Set  $100
 };
 
-const FREE_SHIPPING_THRESHOLD = 15000; // $150 CAD in cents
+const FREE_SHIPPING_THRESHOLD = 9000; // $90 CAD in cents
 
 const CA_US_COUNTRIES = ['CA','US'];
 
