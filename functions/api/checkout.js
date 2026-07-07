@@ -1,13 +1,13 @@
 const STOCK_LIMIT = 5;
 
 const PRICE_MAP = {
-  'price_1TpFHV1Ks67NRN3TWV9WqIJd': 4000,  // Warrior Fairy  $40
-  'price_1TpFHV1Ks67NRN3THaeAQ7NH': 3500,  // Hammer Time    $35
-  'price_1TpFHW1Ks67NRN3TGMNU4ASl': 3500,  // Cat Lady       $35
-  'price_1TpFHW1Ks67NRN3TcQzwTi2n': 3500,  // Samurai        $35
-  'price_1TpFHX1Ks67NRN3TArG5kZ9E': 3500,  // Storm Rider    $35
-  'price_1TpFHY1Ks67NRN3TdeTX1tyJ': 3500,  // Battle Dragon  $35
-  'price_1TpFHY1Ks67NRN3TW1BDyvEd': 18500, // Complete Set  $185
+  'price_1TqiM91Ks67NRN3TXvxL6ebN': 2000,  // Warrior Fairy  $20
+  'price_1TqiMA1Ks67NRN3T94t4WoMm': 2000,  // Hammer Time    $20
+  'price_1TqiMB1Ks67NRN3TAce77AtJ': 2000,  // Cat Lady       $20
+  'price_1TqiMC1Ks67NRN3T4EweoC45': 2000,  // Samurai        $20
+  'price_1TqiMC1Ks67NRN3TvRUOc7G5': 2000,  // Storm Rider    $20
+  'price_1TqiMD1Ks67NRN3TPyj4REw8': 2000,  // Battle Dragon  $20
+  'price_1TqiMD1Ks67NRN3To7BuQ8J8': 10000, // Complete Set  $100
 };
 
 const FREE_SHIPPING_THRESHOLD = 15000; // $150 CAD in cents
