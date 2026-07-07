@@ -1,0 +1,27 @@
+{
+  "name": "tps-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "~/tmp-tailwind/node_modules/.bin/tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secondedgeblades/tps-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/secondedgeblades/tps-site/issues"
+  },
+  "homepage": "https://github.com/secondedgeblades/tps-site#readme",
+  "devDependencies": {
+    "tailwindcss": "4.3.2"
+  }
+}
