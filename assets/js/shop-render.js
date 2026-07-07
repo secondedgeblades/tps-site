@@ -22,7 +22,7 @@
     link.className = 'shop-product-card';
 
     const image = document.createElement('img');
-    image.src = resolveAssetPath(product.image || 'assets/images/logo-v2.png');
+    image.src = resolveAssetPath(product.image || 'assets/images/logo-v3.png');
     image.alt = product.title ? product.title + ' preview' : 'Shop product preview';
 
     const meta = document.createElement('p');
