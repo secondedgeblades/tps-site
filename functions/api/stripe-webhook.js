@@ -53,35 +53,24 @@ export async function onRequestPost(context) {
 
     const lineItems = session.line_items?.data || [];
     const itemList = lineItems.length
-      ? lineItems.map(i => `  - ${PRINT_NAMES[i.price?.id] || i.description} × ${i.quantity}`).join('\n')
-      : '  (expand line_items to see items)';
+      ? lineItems.map(i => `${PRINT_NAMES[i.price?.id] || i.description} x${i.quantity}`).join(', ')
+      : 'see Stripe';
 
-    const text = [
-      `New order on The Piglet's Satchel!`,
-      ``,
-      `Amount: ${amount}`,
-      `Customer: ${customer}`,
-      `Email: ${email}`,
-      `Ships to: ${[city, country].filter(Boolean).join(', ')}`,
-      ``,
-      `Items:`,
-      itemList,
-      ``,
-      `View in Stripe: https://dashboard.stripe.com/payments/${paymentId}`,
-    ].join('\n');
+    const formData = new URLSearchParams({
+      _subject: `New order — ${amount}`,
+      _template: 'table',
+      Amount: amount,
+      Customer: customer,
+      'Customer email': email,
+      'Ships to': [city, country].filter(Boolean).join(', '),
+      Items: itemList.replace(/\s*-\s*/g, '').trim(),
+      'Stripe link': `https://dashboard.stripe.com/payments/${paymentId}`,
+    });
 
-    await fetch('https://api.resend.com/emails', {
+    await fetch(`https://formsubmit.co/${NOTIFY_EMAIL}`, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'TPS Shop <onboarding@resend.dev>',
-        to: NOTIFY_EMAIL,
-        subject: `New order — ${amount}`,
-        text,
-      }),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData.toString(),
     });
   }
 
