@@ -42,37 +42,8 @@ export async function onRequestPost(context) {
   try { event = JSON.parse(body); }
   catch { return new Response('Invalid JSON', { status: 400 }); }
 
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-    const amount = `$${(session.amount_total / 100).toFixed(2)} CAD`;
-    const customer = session.customer_details?.name || 'Unknown';
-    const email = session.customer_details?.email || 'Unknown';
-    const city = session.shipping_details?.address?.city || '';
-    const country = session.shipping_details?.address?.country || '';
-    const paymentId = session.payment_intent;
-
-    const lineItems = session.line_items?.data || [];
-    const itemList = lineItems.length
-      ? lineItems.map(i => `${PRINT_NAMES[i.price?.id] || i.description} x${i.quantity}`).join(', ')
-      : 'see Stripe';
-
-    const formData = new URLSearchParams({
-      _subject: `New order — ${amount}`,
-      _template: 'table',
-      Amount: amount,
-      Customer: customer,
-      'Customer email': email,
-      'Ships to': [city, country].filter(Boolean).join(', '),
-      Items: itemList.replace(/\s*-\s*/g, '').trim(),
-      'Stripe link': `https://dashboard.stripe.com/payments/${paymentId}`,
-    });
-
-    await fetch(`https://formsubmit.co/${NOTIFY_EMAIL}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData.toString(),
-    });
-  }
+  // Notification is handled client-side on thanks-order.html via FormSubmit AJAX.
+  // Server-side email requires a transactional email service (FormSubmit blocks non-browser requests).
 
   return new Response(JSON.stringify({ received: true }), {
     status: 200,

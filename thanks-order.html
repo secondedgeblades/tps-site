@@ -31,6 +31,20 @@
 
 </div>
 <script src="assets/js/cart.js"></script>
-<script>Cart.clear();</script>
+<script>
+  Cart.clear();
+  const sessionId = new URLSearchParams(window.location.search).get('session_id');
+  if (sessionId) {
+    fetch('https://formsubmit.co/ajax/secondedgeblades@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'New order — The Piglet\'s Satchel',
+        'Stripe session': sessionId,
+        'View order': 'https://dashboard.stripe.com/payments/' + sessionId,
+      }),
+    });
+  }
+</script>
 </body>
 </html>
