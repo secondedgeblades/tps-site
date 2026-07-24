@@ -177,8 +177,11 @@ function handleAddToCart(btn) {
 
 async function checkoutCart() {
   const btn = document.getElementById('cart-checkout-btn');
+  const errEl = document.getElementById('cart-error');
+
   btn.textContent = 'Loading…';
   btn.disabled = true;
+  if (errEl) errEl.hidden = true;
 
   const items = Cart.getItems().map(function(i) {
     return { priceId: i.priceId, quantity: i.quantity };
@@ -211,6 +214,10 @@ async function checkoutCart() {
   } catch (err) {
     btn.textContent = 'Checkout';
     btn.disabled = false;
+    if (errEl) {
+      errEl.textContent = err.message || 'Something went wrong. Please try again.';
+      errEl.hidden = false;
+    }
     console.error(err);
   }
 }
