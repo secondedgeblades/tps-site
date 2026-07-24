@@ -127,8 +127,6 @@ export async function onRequestPost(context) {
       params.set(`shipping_address_collection[allowed_countries][${i}]`, c);
     });
 
-    return json({ diagnostic: 'pre-stripe', bodyLen: params.toString().length });
-
     const stripeRes = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
       headers: {
@@ -138,7 +136,10 @@ export async function onRequestPost(context) {
       body: params.toString(),
     });
 
-    const session = await stripeRes.json();
+    const stripeBody = await stripeRes.text();
+    return json({ diagnostic: 'stripe-raw', status: stripeRes.status, body: stripeBody.slice(0, 1000) });
+
+    const session = JSON.parse(stripeBody);
 
     if (!stripeRes.ok) {
       console.error('Stripe create session error:', JSON.stringify(session));
