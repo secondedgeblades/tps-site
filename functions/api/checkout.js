@@ -127,6 +127,8 @@ export async function onRequestPost(context) {
       params.set(`shipping_address_collection[allowed_countries][${i}]`, c);
     });
 
+    return json({ diagnostic: 'pre-stripe', bodyLen: params.toString().length });
+
     const stripeRes = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
       headers: {
