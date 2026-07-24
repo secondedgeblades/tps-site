@@ -115,12 +115,6 @@ export async function onRequestPost(context) {
       params.set('shipping_options[1][shipping_rate_data][type]', 'fixed_amount');
       params.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '3200');
       params.set('shipping_options[1][shipping_rate_data][fixed_amount][currency]', 'cad');
-      CA_US_COUNTRIES.forEach((c, i) => {
-        params.set(`shipping_options[0][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
-      });
-      INTL_COUNTRIES.forEach((c, i) => {
-        params.set(`shipping_options[1][shipping_rate_data][restrictions][allowed_countries][${i}]`, c);
-      });
     }
 
     ALLOWED_COUNTRIES.forEach((c, i) => {
@@ -136,10 +130,7 @@ export async function onRequestPost(context) {
       body: params.toString(),
     });
 
-    const stripeBody = await stripeRes.text();
-    return json({ diagnostic: 'stripe-raw', status: stripeRes.status, body: stripeBody.slice(0, 1000) });
-
-    const session = JSON.parse(stripeBody);
+    const session = await stripeRes.json();
 
     if (!stripeRes.ok) {
       console.error('Stripe create session error:', JSON.stringify(session));
