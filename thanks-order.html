@@ -41,7 +41,7 @@
       body: JSON.stringify({
         _subject: 'New order — The Piglet\'s Satchel',
         'Stripe session': sessionId,
-        'View order': 'https://dashboard.stripe.com/payments/' + sessionId,
+        'View order': 'https://dashboard.stripe.com/checkout/sessions/' + sessionId,
       }),
     });
   }
