@@ -21,35 +21,9 @@ const INTL_COUNTRIES = [
 
 const ALLOWED_COUNTRIES = [...CA_US_COUNTRIES, ...INTL_COUNTRIES];
 
-async function getSoldQty(secretKey) {
-  const soldQty = {};
-  let url = 'https://api.stripe.com/v1/checkout/sessions?status=complete&limit=100&expand[]=data.line_items';
-
-  while (url) {
-    const res = await fetch(url, {
-      headers: { 'Authorization': `Bearer ${secretKey}` },
-    });
-    const data = await res.json();
-
-    if (!res.ok) {
-      console.error('Stripe sessions list error:', JSON.stringify(data));
-      break;
-    }
-
-    for (const session of (data.data || [])) {
-      for (const item of (session.line_items?.data || [])) {
-        const pid = item.price?.id;
-        if (pid && PRICE_MAP[pid]) {
-          soldQty[pid] = (soldQty[pid] || 0) + item.quantity;
-        }
-      }
-    }
-    url = data.has_more && data.data?.length
-      ? `https://api.stripe.com/v1/checkout/sessions?status=complete&limit=100&expand[]=data.line_items&starting_after=${data.data[data.data.length - 1].id}`
-      : null;
-  }
-
-  return soldQty;
+async function getSoldQty(_secretKey) {
+  // Stock check temporarily bypassed for diagnostics
+  return {};
 }
 
 export async function onRequestPost(context) {
