@@ -43,6 +43,8 @@ export async function onRequestPost(context) {
     });
 
   try {
+    return json({ diagnostic: 'function reached', ok: true });
+
     let body;
     try { body = await request.json(); }
     catch {
